@@ -12,7 +12,7 @@ import UIKit
 
 
 
-class ReportsTableViewController: FioriBaseTableViewController {
+class ReportsTableViewController: BindingTableViewController {
 
     // MARK: - Model
 
@@ -56,6 +56,23 @@ class ReportsTableViewController: FioriBaseTableViewController {
         downloadCompleteObserver = NotificationCenter.default.addObserver(forName: DataHandler.downloadCompleteNotification, object: nil, queue: .main) { [unowned self] _ in
             self.reloadReports()
         }
+        
+        registerDataBinding(AnyCellBinding(ReportBinding()), for: 0, with: self.reportQuery(isActive: true))
+        registerDataBinding(AnyCellBinding(ReportBinding()), for: 1, with: self.reportQuery(isActive: false))
+    }
+    
+    func reportQuery(isActive: Bool) -> DataQuery {
+        
+        let activeFilter = isActive ? ExpenseReportItem.reportstatusid.equal("ACT") : ExpenseReportItem.reportstatusid.notEqual("ACT")
+        
+        let nestedQuery = DataQuery()
+            .expand(ExpenseItem.currency, ExpenseItem.expenseType, ExpenseItem.paymentType, ExpenseItem.attachments)
+            .orderBy(ExpenseItem.itemdate)
+        
+        return DataQuery()
+            .from(TravelexpenseMetadata.EntitySets.expenseReports)
+            .filter(activeFilter)
+            .expand(ExpenseReportItem.expenseItems, withQuery: nestedQuery)
     }
 
 
@@ -70,28 +87,15 @@ class ReportsTableViewController: FioriBaseTableViewController {
     override func numberOfSections(in _: UITableView) -> Int {
         return 2
     }
-
-    override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return self.activeExpenseReports.count
-        case 1:
-            return self.submittedExpenseReports.count
-        default:
-            return 1
-        }
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0, 1:
-            let report = indexPath.section == 0 ? activeExpenseReports[indexPath.row] : submittedExpenseReports[indexPath.row]
-            let cell = tableView.dequeueReusableCell(withIdentifier: FUIObjectTableViewCell.reuseIdentifier, for: indexPath) as! FUIObjectTableViewCell
-            cell.headlineText = report.reportname
-            cell.footnoteText = report.reportlocation
-            cell.subheadlineText = report.rangeString()
-
-            if let status = report.reportstatusid {
+    
+    struct ReportBinding: CellBinding {
+        
+        func bind(data: ExpenseReportItem, to cell: FUIObjectTableViewCell) -> FUIObjectTableViewCell {
+            cell.headlineText = data.reportname
+            cell.footnoteText = data.reportlocation
+            cell.subheadlineText = data.rangeString()
+            
+            if let status = data.reportstatusid {
                 switch status.trimmingCharacters(in: .whitespaces) {
                 case "PEN":
                     cell.statusText = "Pending"
@@ -108,9 +112,30 @@ class ReportsTableViewController: FioriBaseTableViewController {
                     break
                 }
             }
-
+            
             cell.accessoryType = .disclosureIndicator
             return cell
+        }
+        
+    }
+
+    override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0, 1:
+            return super.tableView(tableView, numberOfRowsInSection: section)
+//        case 0:
+//            return self.activeExpenseReports.count
+//        case 1:
+//            return self.submittedExpenseReports.count
+        default:
+            return 1
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.section {
+        case 0, 1:
+            return super.tableView(tableView, cellForRowAt: indexPath)
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: FUITextFieldFormCell.reuseIdentifier, for: indexPath) as! FUITextFieldFormCell
             cell.keyLabel.text = "All Reports"

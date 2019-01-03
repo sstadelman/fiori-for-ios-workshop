@@ -21,9 +21,9 @@ import SAPOfflineOData
 // Customize these for your Mobile Services application.
 
 enum MobileServicesConfiguration {
-    static let trialAccountName: String = <#SAP Cloud Platform account name#>
-    static let applicationID: String = <#Application ID in Mobile Services#>
-    static let destinationName: String = <#Destination name#>
+    static let trialAccountName: String = "i826181trial"
+    static let applicationID: String = "com.sample.saptravelexpense"
+    static let destinationName: String = "saptravelexpense"
 }
 
 // -----------------------------------------------------------------------------

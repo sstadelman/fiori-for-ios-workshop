@@ -44,6 +44,13 @@
 		1BC042A220CCE290008BF50D /* CreateExpenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429920CCE28F008BF50D /* CreateExpenseTableViewController.swift */; };
 		1BC042A320CCE290008BF50D /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429A20CCE290008BF50D /* ReportsTableViewController.swift */; };
 		1BC042A920CCEDF6008BF50D /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042A820CCEDF6008BF50D /* DataHandler.swift */; };
+		1BD76B6921DDCF0100AE658C /* CellBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B6821DDCF0100AE658C /* CellBinding.swift */; };
+		1BD76B6B21DDCF1500AE658C /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B6A21DDCF1500AE658C /* ReuseIdentifying.swift */; };
+		1BD76B6D21DDCF3600AE658C /* BindableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B6C21DDCF3600AE658C /* BindableTableViewCell.swift */; };
+		1BD76B6F21DDCF5700AE658C /* AnyCellBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B6E21DDCF5700AE658C /* AnyCellBinding.swift */; };
+		1BD76B7121DDCF7B00AE658C /* SectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B7021DDCF7B00AE658C /* SectionDataSource.swift */; };
+		1BD76B7321DDCFBA00AE658C /* SectionDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B7221DDCFBA00AE658C /* SectionDataSourceImpl.swift */; };
+		1BD76B7521DDD08A00AE658C /* BindingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B7421DDD08A00AE658C /* BindingTableViewController.swift */; };
 		1BE3BD0D20F4ED3700051AA9 /* Palette.nss in Resources */ = {isa = PBXBuildFile; fileRef = 1BE3BD0C20F4ED3700051AA9 /* Palette.nss */; };
 		6C67CF5D21AC48D4001440ED /* ExpenseReportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4B21AC48D4001440ED /* ExpenseReportItem.swift */; };
 		6C67CF5E21AC48D4001440ED /* TravelexpenseMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4C21AC48D4001440ED /* TravelexpenseMetadata.swift */; };
@@ -122,6 +129,13 @@
 		1BC0429920CCE28F008BF50D /* CreateExpenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateExpenseTableViewController.swift; sourceTree = "<group>"; };
 		1BC0429A20CCE290008BF50D /* ReportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportsTableViewController.swift; sourceTree = "<group>"; };
 		1BC042A820CCEDF6008BF50D /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		1BD76B6821DDCF0100AE658C /* CellBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBinding.swift; sourceTree = "<group>"; };
+		1BD76B6A21DDCF1500AE658C /* ReuseIdentifying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifying.swift; sourceTree = "<group>"; };
+		1BD76B6C21DDCF3600AE658C /* BindableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableTableViewCell.swift; sourceTree = "<group>"; };
+		1BD76B6E21DDCF5700AE658C /* AnyCellBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCellBinding.swift; sourceTree = "<group>"; };
+		1BD76B7021DDCF7B00AE658C /* SectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDataSource.swift; sourceTree = "<group>"; };
+		1BD76B7221DDCFBA00AE658C /* SectionDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDataSourceImpl.swift; sourceTree = "<group>"; };
+		1BD76B7421DDD08A00AE658C /* BindingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTableViewController.swift; sourceTree = "<group>"; };
 		1BE3BD0C20F4ED3700051AA9 /* Palette.nss */ = {isa = PBXFileReference; lastKnownFileType = text; path = Palette.nss; sourceTree = "<group>"; };
 		6C67CF4B21AC48D4001440ED /* ExpenseReportItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseReportItem.swift; sourceTree = "<group>"; };
 		6C67CF4C21AC48D4001440ED /* TravelexpenseMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelexpenseMetadata.swift; sourceTree = "<group>"; };
@@ -281,6 +295,20 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		1BD76B6721DDCE8900AE658C /* Binding Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				1BD76B6821DDCF0100AE658C /* CellBinding.swift */,
+				1BD76B6A21DDCF1500AE658C /* ReuseIdentifying.swift */,
+				1BD76B6C21DDCF3600AE658C /* BindableTableViewCell.swift */,
+				1BD76B6E21DDCF5700AE658C /* AnyCellBinding.swift */,
+				1BD76B7021DDCF7B00AE658C /* SectionDataSource.swift */,
+				1BD76B7221DDCFBA00AE658C /* SectionDataSourceImpl.swift */,
+				1BD76B7421DDD08A00AE658C /* BindingTableViewController.swift */,
+			);
+			path = "Binding Prototype";
+			sourceTree = "<group>";
+		};
 		6C67CF4A21AC48D4001440ED /* public */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +353,7 @@
 		755C10B41D5C63B000ECF6A2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1BD76B6721DDCE8900AE658C /* Binding Prototype */,
 				6C9CD0ED2150ED8C00FAF1D9 /* ImageHandler.swift */,
 				1BC042A820CCEDF6008BF50D /* DataHandler.swift */,
 				7A9F6FF51F3883D3000A1815 /* SAPFioriLoadingIndicator.swift */,
@@ -479,19 +508,24 @@
 				6C67CF6C21AC48D4001440ED /* TravelexpenseMetadataChanges.swift in Sources */,
 				6C67CF6121AC48D4001440ED /* Reservation.swift in Sources */,
 				7A9F6FF61F3883D3000A1815 /* SAPFioriLoadingIndicator.swift in Sources */,
+				1BD76B7521DDD08A00AE658C /* BindingTableViewController.swift in Sources */,
 				12E07EF21E96851800460A94 /* CollectionType.swift in Sources */,
 				1BC0429D20CCE290008BF50D /* ExpenseDetailTableViewController.swift in Sources */,
 				6C67CF6321AC48D4001440ED /* Payment.swift in Sources */,
 				7A1315B91D4B982000A5DA56 /* AppDelegate.swift in Sources */,
+				1BD76B7321DDCFBA00AE658C /* SectionDataSourceImpl.swift in Sources */,
+				1BD76B6F21DDCF5700AE658C /* AnyCellBinding.swift in Sources */,
 				6C67CF6921AC48D4001440ED /* TravelexpenseFactory.swift in Sources */,
 				1BC042A120CCE290008BF50D /* FioriBaseTableViewController.swift in Sources */,
 				1BC0428E20CCE18D008BF50D /* ExpenseReportItemType+Extensions.swift in Sources */,
 				6C67CF6A21AC48D4001440ED /* TravelexpenseMetadataParser.swift in Sources */,
 				1B7BFD6C20F3AEBF003EB4C5 /* UITextField.swift in Sources */,
 				1BC042A320CCE290008BF50D /* ReportsTableViewController.swift in Sources */,
+				1BD76B6D21DDCF3600AE658C /* BindableTableViewCell.swift in Sources */,
 				6C9CD0EE2150ED8C00FAF1D9 /* ImageHandler.swift in Sources */,
 				1BC042A220CCE290008BF50D /* CreateExpenseTableViewController.swift in Sources */,
 				6C67CF6621AC48D4001440ED /* Travelexpense.swift in Sources */,
+				1BD76B6B21DDCF1500AE658C /* ReuseIdentifying.swift in Sources */,
 				6C67CF5F21AC48D4001440ED /* Currency.swift in Sources */,
 				1BC0429C20CCE290008BF50D /* EditExpenseTableViewController.swift in Sources */,
 				1BC042A020CCE290008BF50D /* TripsTableViewController.swift in Sources */,
@@ -504,6 +538,7 @@
 				1BC0429B20CCE290008BF50D /* ExpensesTableViewController.swift in Sources */,
 				6C67CF6721AC48D4001440ED /* Expense.swift in Sources */,
 				6C67CF6021AC48D4001440ED /* ReportStatus.swift in Sources */,
+				1BD76B7121DDCF7B00AE658C /* SectionDataSource.swift in Sources */,
 				6C67CF6221AC48D4001440ED /* ReservationItem.swift in Sources */,
 				1B5F26DB20D0F44A0073C63D /* CreateReportTableViewController.swift in Sources */,
 				6C67CF6421AC48D4001440ED /* TripItem.swift in Sources */,
@@ -516,6 +551,7 @@
 				1BA1BFA720CF83C60067F0F0 /* Formatters.swift in Sources */,
 				6C67CF6B21AC48D4001440ED /* TravelexpenseMetadataText.swift in Sources */,
 				1BC0428F20CCE18D008BF50D /* FUIListPickerDataSource+Extensions.swift in Sources */,
+				1BD76B6921DDCF0100AE658C /* CellBinding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

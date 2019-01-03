@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SAPOData
 
 extension ExpenseReportItem {
     
@@ -32,4 +33,5 @@ extension ExpenseReportItem {
         }
     }
 }
+
 
