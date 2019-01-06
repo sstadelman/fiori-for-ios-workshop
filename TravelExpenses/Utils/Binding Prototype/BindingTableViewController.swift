@@ -16,10 +16,10 @@ class BindingTableViewController: FioriBaseTableViewController, UITableViewDataS
     
     var dataSources: [Int: SectionDataSource] = [:]
     
-    func registerDataBinding<Data, Cell: UITableViewCell & ReuseIdentifying>(_ dataBinding: AnyCellBinding<Data, Cell>, for section: Int, with dataQuery: DataQuery) {
+    func registerDataBinding<Data, Cell: UITableViewCell & ReuseIdentifying>(_ dataBinding: AnyCellBinding<Data, Cell>, forSection section: Int, with dataQuery: DataQuery) {
         
         self.tableView.register(Cell.self, forCellReuseIdentifier: Cell.reuseIdentifier)
-        let dataSource = SectionDataSourceImpl<AnyCellBinding<Data, Cell>>(binding: dataBinding, to: dataQuery, for: section, in: tableView)
+        let dataSource = SectionDataSourceImpl<AnyCellBinding<Data, Cell>>(binding: dataBinding, to: dataQuery, for: section, in: tableView, viewController: self)
         self.dataSources.updateValue(dataSource, forKey: section)
     }
     
@@ -33,6 +33,13 @@ class BindingTableViewController: FioriBaseTableViewController, UITableViewDataS
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let dataSource = dataSources[indexPath.section] else { return UITableViewCell() }
         return dataSource.tableView(tableView, cellForRowAt: indexPath.row)
+    }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let dataSource = dataSources[indexPath.section] else { return }
+        dataSource.tableView(tableView, didSelectRowAt: indexPath.row)
     }
     
     // MARK: - Table view data source prefetching

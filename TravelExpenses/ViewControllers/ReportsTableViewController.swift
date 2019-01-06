@@ -57,8 +57,8 @@ class ReportsTableViewController: BindingTableViewController {
             self.reloadReports()
         }
         
-        registerDataBinding(AnyCellBinding(ReportBinding()), for: 0, with: self.reportQuery(isActive: true))
-        registerDataBinding(AnyCellBinding(ReportBinding()), for: 1, with: self.reportQuery(isActive: false))
+        registerDataBinding(AnyCellBinding(ReportBinding()), forSection: 0, with: self.reportQuery(isActive: true))
+        registerDataBinding(AnyCellBinding(ReportBinding()), forSection: 1, with: self.reportQuery(isActive: false))
     }
     
     func reportQuery(isActive: Bool) -> DataQuery {
@@ -79,6 +79,7 @@ class ReportsTableViewController: BindingTableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        refresh()
         reloadReports()
     }
 
@@ -117,33 +118,35 @@ class ReportsTableViewController: BindingTableViewController {
             return cell
         }
         
-    }
-
-    override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0, 1:
-            return super.tableView(tableView, numberOfRowsInSection: section)
-//        case 0:
-//            return self.activeExpenseReports.count
-//        case 1:
-//            return self.submittedExpenseReports.count
-        default:
-            return 1
+        func bindDidSelect(cell: FUIObjectTableViewCell, with data: ExpenseReportItem, in viewController: UIViewController) {
+            
+            let reportDetail = ReportDetailsTableViewController(style: .grouped)
+            reportDetail.setReport(data)
+            viewController.navigationController?.pushViewController(reportDetail, animated: true)
         }
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0, 1:
-            return super.tableView(tableView, cellForRowAt: indexPath)
-        default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: FUITextFieldFormCell.reuseIdentifier, for: indexPath) as! FUITextFieldFormCell
-            cell.keyLabel.text = "All Reports"
-            cell.value = "\(expenseReports.count)"
-            cell.accessoryType = .disclosureIndicator
-            return cell
-        }
+override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
+    switch section {
+    case 0, 1:
+        return super.tableView(tableView, numberOfRowsInSection: section)
+    default:
+        return 1
     }
+}
+
+override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    switch indexPath.section {
+    case 0, 1:
+        return super.tableView(tableView, cellForRowAt: indexPath)
+    default:
+        let cell = tableView.dequeueReusableCell(withIdentifier: FUITextFieldFormCell.reuseIdentifier, for: indexPath) as! FUITextFieldFormCell
+        cell.keyLabel.text = "All Reports"
+        cell.value = "\(expenseReports.count)"
+        cell.accessoryType = .disclosureIndicator
+        return cell
+    }
+}
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: FUITableViewHeaderFooterView.reuseIdentifier) as! FUITableViewHeaderFooterView
@@ -164,14 +167,10 @@ class ReportsTableViewController: BindingTableViewController {
 
     // MARK: - Table view delegate
 
-    override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.section < 2 else { return }
 
-        let report = indexPath.section == 0 ? activeExpenseReports[indexPath.row] : submittedExpenseReports[indexPath.row]
-
-        let reportDetail = ReportDetailsTableViewController(style: .grouped)
-        reportDetail.setReport(report)
-        self.navigationController?.pushViewController(reportDetail, animated: true)
+        return super.tableView(tableView, didSelectRowAt: indexPath)
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

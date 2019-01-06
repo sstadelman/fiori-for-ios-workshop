@@ -11,11 +11,12 @@ import SAPOData
 
 class SectionDataSourceImpl<Binding: CellBinding>: SectionDataSource {
     
-    init(binding: Binding, to query: DataQuery, for section: Int, in tableView: UITableView) {
+    init(binding: Binding, to query: DataQuery, for section: Int, in tableView: UITableView, viewController: UIViewController) {
         self.binding = binding
         self.section = section
         self.query = query
         self.tableView = tableView
+        self.viewController = viewController
         
         self.refresh()
     }
@@ -42,6 +43,7 @@ class SectionDataSourceImpl<Binding: CellBinding>: SectionDataSource {
     }
     
     private weak var tableView: UITableView?
+    private weak var viewController: UIViewController?
     
     func tableView(_ tableView: UITableView, numberOfRowsIn section: Int) -> Int {
         return entities.count
@@ -53,9 +55,16 @@ class SectionDataSourceImpl<Binding: CellBinding>: SectionDataSource {
         return binding.bind(data: entity, to: cell) as! UITableViewCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt index: Int) {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Binding.Cell.reuseIdentifier, for: IndexPath(row: index, section: self.section)) as? Binding.Cell,
+        let viewController = self.viewController else { return }
+        let entity = self.entities[index]
+        binding.bindDidSelect(cell: cell, with: entity, in: viewController)
+    }
+    
     func refresh() {
         DataHandler.shared.service.executeQuery(query) { [weak self] entities, error in
-            guard let entities = entities else { return print(error) }
+            guard let entities = entities else { return print(String(describing: error)) }
             do {
                 self?.entities = try entities.entityList().toArray() as! [Binding.Data]
             }
