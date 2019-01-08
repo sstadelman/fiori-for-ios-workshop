@@ -11,6 +11,7 @@ import Photos
 import SAPFiori
 import SAPOData
 import UIKit
+import TravelExpensesShared
 
 class CreateExpenseTableViewController: FUIFormTableViewController {
     private var modalProcessingView: FUIModalProcessingIndicatorView?

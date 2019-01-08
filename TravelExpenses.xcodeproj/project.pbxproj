@@ -17,6 +17,37 @@
 		1B5F26D220D0D17E0073C63D /* SnapshotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F26D120D0D17E0073C63D /* SnapshotViewController.swift */; };
 		1B5F26DB20D0F44A0073C63D /* CreateReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F26DA20D0F44A0073C63D /* CreateReportTableViewController.swift */; };
 		1B7283C22126A97200D26ADE /* IMG_0268.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1B7283C12126A97200D26ADE /* IMG_0268.JPG */; };
+		1B749E4A21E1A19B00F6DC98 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B749E4921E1A19B00F6DC98 /* IntentHandler.swift */; };
+		1B749E5221E1A19B00F6DC98 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B749E5121E1A19B00F6DC98 /* IntentsUI.framework */; };
+		1B749E5521E1A19B00F6DC98 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B749E5421E1A19B00F6DC98 /* IntentViewController.swift */; };
+		1B749E5821E1A19B00F6DC98 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B749E5621E1A19B00F6DC98 /* MainInterface.storyboard */; };
+		1B749E5C21E1A19B00F6DC98 /* TravelExpensesIntentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1B749E5021E1A19B00F6DC98 /* TravelExpensesIntentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1B749E5F21E1A19B00F6DC98 /* TravelExpensesIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1B749E4721E1A19B00F6DC98 /* TravelExpensesIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1B749E7021E31CBC00F6DC98 /* TravelExpensesShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B749E6E21E31CBC00F6DC98 /* TravelExpensesShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B749E7321E31CBC00F6DC98 /* TravelExpensesShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B749E6C21E31CBB00F6DC98 /* TravelExpensesShared.framework */; };
+		1B749E7421E31CBC00F6DC98 /* TravelExpensesShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B749E6C21E31CBB00F6DC98 /* TravelExpensesShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1B749E7821E31CD600F6DC98 /* SAPOData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9D41E120D2CEA100FD84B2 /* SAPOData.framework */; };
+		1B749E7921E31CD600F6DC98 /* SAPOfflineOData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9D41E220D2CEA100FD84B2 /* SAPOfflineOData.framework */; };
+		1B749E7A21E31CEE00F6DC98 /* TravelexpenseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5821AC48D4001440ED /* TravelexpenseFactory.swift */; };
+		1B749E7B21E31CEE00F6DC98 /* TravelexpenseMetadataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5921AC48D4001440ED /* TravelexpenseMetadataParser.swift */; };
+		1B749E7C21E31CEE00F6DC98 /* TravelexpenseMetadataText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5A21AC48D4001440ED /* TravelexpenseMetadataText.swift */; };
+		1B749E7D21E31CEE00F6DC98 /* TravelexpenseMetadataChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5B21AC48D4001440ED /* TravelexpenseMetadataChanges.swift */; };
+		1B749E7E21E31CEE00F6DC98 /* TravelexpenseStaticResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5C21AC48D4001440ED /* TravelexpenseStaticResolver.swift */; };
+		1B749E7F21E31CF600F6DC98 /* ExpenseReportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4B21AC48D4001440ED /* ExpenseReportItem.swift */; };
+		1B749E8021E31CF600F6DC98 /* TravelexpenseMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4C21AC48D4001440ED /* TravelexpenseMetadata.swift */; };
+		1B749E8121E31CF600F6DC98 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4D21AC48D4001440ED /* Currency.swift */; };
+		1B749E8221E31CF600F6DC98 /* ReportStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4E21AC48D4001440ED /* ReportStatus.swift */; };
+		1B749E8321E31CF600F6DC98 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4F21AC48D4001440ED /* Reservation.swift */; };
+		1B749E8421E31CF600F6DC98 /* ReservationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5021AC48D4001440ED /* ReservationItem.swift */; };
+		1B749E8521E31CF600F6DC98 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5121AC48D4001440ED /* Payment.swift */; };
+		1B749E8621E31CF600F6DC98 /* TripItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5221AC48D4001440ED /* TripItem.swift */; };
+		1B749E8721E31CF600F6DC98 /* ExpenseItemAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5321AC48D4001440ED /* ExpenseItemAttachment.swift */; };
+		1B749E8821E31CF600F6DC98 /* Travelexpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5421AC48D4001440ED /* Travelexpense.swift */; };
+		1B749E8921E31CF600F6DC98 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5521AC48D4001440ED /* Expense.swift */; };
+		1B749E8A21E31CF600F6DC98 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5621AC48D4001440ED /* ExpenseItem.swift */; };
+		1B749E8B21E31D0F00F6DC98 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042A820CCEDF6008BF50D /* DataHandler.swift */; };
+		1B749E8D21E4688C00F6DC98 /* ExpenseReportItemType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0428B20CCE18D008BF50D /* ExpenseReportItemType+Extensions.swift */; };
+		1B749E8E21E4688C00F6DC98 /* ExpenseItemType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0428D20CCE18D008BF50D /* ExpenseItemType+Extensions.swift */; };
 		1B7BFD6C20F3AEBF003EB4C5 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7BFD6B20F3AEBF003EB4C5 /* UITextField.swift */; };
 		1B9D41E320D2CEA200FD84B2 /* SAPFiori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9D41DD20D2CEA100FD84B2 /* SAPFiori.framework */; };
 		1B9D41E420D2CEA200FD84B2 /* SAPFiori.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9D41DD20D2CEA100FD84B2 /* SAPFiori.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -32,9 +63,7 @@
 		1B9D41EE20D2CEA200FD84B2 /* SAPOfflineOData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9D41E220D2CEA100FD84B2 /* SAPOfflineOData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1BA1BFA520CF833C0067F0F0 /* BaseEntityTypePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1BFA420CF833C0067F0F0 /* BaseEntityTypePickerDataSource.swift */; };
 		1BA1BFA720CF83C60067F0F0 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1BFA620CF83C60067F0F0 /* Formatters.swift */; };
-		1BC0428E20CCE18D008BF50D /* ExpenseReportItemType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0428B20CCE18D008BF50D /* ExpenseReportItemType+Extensions.swift */; };
 		1BC0428F20CCE18D008BF50D /* FUIListPickerDataSource+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0428C20CCE18D008BF50D /* FUIListPickerDataSource+Extensions.swift */; };
-		1BC0429020CCE18D008BF50D /* ExpenseItemType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0428D20CCE18D008BF50D /* ExpenseItemType+Extensions.swift */; };
 		1BC0429B20CCE290008BF50D /* ExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429220CCE28F008BF50D /* ExpensesTableViewController.swift */; };
 		1BC0429C20CCE290008BF50D /* EditExpenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429320CCE28F008BF50D /* EditExpenseTableViewController.swift */; };
 		1BC0429D20CCE290008BF50D /* ExpenseDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429420CCE28F008BF50D /* ExpenseDetailTableViewController.swift */; };
@@ -43,7 +72,6 @@
 		1BC042A120CCE290008BF50D /* FioriBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429820CCE28F008BF50D /* FioriBaseTableViewController.swift */; };
 		1BC042A220CCE290008BF50D /* CreateExpenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429920CCE28F008BF50D /* CreateExpenseTableViewController.swift */; };
 		1BC042A320CCE290008BF50D /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429A20CCE290008BF50D /* ReportsTableViewController.swift */; };
-		1BC042A920CCEDF6008BF50D /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042A820CCEDF6008BF50D /* DataHandler.swift */; };
 		1BD76B6921DDCF0100AE658C /* CellBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B6821DDCF0100AE658C /* CellBinding.swift */; };
 		1BD76B6B21DDCF1500AE658C /* ReuseIdentifying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B6A21DDCF1500AE658C /* ReuseIdentifying.swift */; };
 		1BD76B6D21DDCF3600AE658C /* BindableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B6C21DDCF3600AE658C /* BindableTableViewCell.swift */; };
@@ -52,23 +80,6 @@
 		1BD76B7321DDCFBA00AE658C /* SectionDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B7221DDCFBA00AE658C /* SectionDataSourceImpl.swift */; };
 		1BD76B7521DDD08A00AE658C /* BindingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD76B7421DDD08A00AE658C /* BindingTableViewController.swift */; };
 		1BE3BD0D20F4ED3700051AA9 /* Palette.nss in Resources */ = {isa = PBXBuildFile; fileRef = 1BE3BD0C20F4ED3700051AA9 /* Palette.nss */; };
-		6C67CF5D21AC48D4001440ED /* ExpenseReportItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4B21AC48D4001440ED /* ExpenseReportItem.swift */; };
-		6C67CF5E21AC48D4001440ED /* TravelexpenseMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4C21AC48D4001440ED /* TravelexpenseMetadata.swift */; };
-		6C67CF5F21AC48D4001440ED /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4D21AC48D4001440ED /* Currency.swift */; };
-		6C67CF6021AC48D4001440ED /* ReportStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4E21AC48D4001440ED /* ReportStatus.swift */; };
-		6C67CF6121AC48D4001440ED /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF4F21AC48D4001440ED /* Reservation.swift */; };
-		6C67CF6221AC48D4001440ED /* ReservationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5021AC48D4001440ED /* ReservationItem.swift */; };
-		6C67CF6321AC48D4001440ED /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5121AC48D4001440ED /* Payment.swift */; };
-		6C67CF6421AC48D4001440ED /* TripItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5221AC48D4001440ED /* TripItem.swift */; };
-		6C67CF6521AC48D4001440ED /* ExpenseItemAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5321AC48D4001440ED /* ExpenseItemAttachment.swift */; };
-		6C67CF6621AC48D4001440ED /* Travelexpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5421AC48D4001440ED /* Travelexpense.swift */; };
-		6C67CF6721AC48D4001440ED /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5521AC48D4001440ED /* Expense.swift */; };
-		6C67CF6821AC48D4001440ED /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5621AC48D4001440ED /* ExpenseItem.swift */; };
-		6C67CF6921AC48D4001440ED /* TravelexpenseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5821AC48D4001440ED /* TravelexpenseFactory.swift */; };
-		6C67CF6A21AC48D4001440ED /* TravelexpenseMetadataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5921AC48D4001440ED /* TravelexpenseMetadataParser.swift */; };
-		6C67CF6B21AC48D4001440ED /* TravelexpenseMetadataText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5A21AC48D4001440ED /* TravelexpenseMetadataText.swift */; };
-		6C67CF6C21AC48D4001440ED /* TravelexpenseMetadataChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5B21AC48D4001440ED /* TravelexpenseMetadataChanges.swift */; };
-		6C67CF6D21AC48D4001440ED /* TravelexpenseStaticResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67CF5C21AC48D4001440ED /* TravelexpenseStaticResolver.swift */; };
 		6C9CD0EE2150ED8C00FAF1D9 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9CD0ED2150ED8C00FAF1D9 /* ImageHandler.swift */; };
 		7A1315B91D4B982000A5DA56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1315B81D4B982000A5DA56 /* AppDelegate.swift */; };
 		7A1315C21D4B982000A5DA56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1315C11D4B982000A5DA56 /* Assets.xcassets */; };
@@ -78,7 +89,43 @@
 		AB8DC8F921B2AD3D003DF754 /* OfflineODataStoreState+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DC8F821B2AD3D003DF754 /* OfflineODataStoreState+Description.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1B749E5A21E1A19B00F6DC98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A1315AD1D4B982000A5DA56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B749E4F21E1A19B00F6DC98;
+			remoteInfo = TravelExpensesIntentUI;
+		};
+		1B749E5D21E1A19B00F6DC98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A1315AD1D4B982000A5DA56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B749E4621E1A19B00F6DC98;
+			remoteInfo = TravelExpensesIntent;
+		};
+		1B749E7121E31CBC00F6DC98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A1315AD1D4B982000A5DA56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B749E6B21E31CBB00F6DC98;
+			remoteInfo = TravelExpensesShared;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		1B749E6621E1A19B00F6DC98 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1B749E5C21E1A19B00F6DC98 /* TravelExpensesIntentUI.appex in Embed App Extensions */,
+				1B749E5F21E1A19B00F6DC98 /* TravelExpensesIntent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B9D41EF20D2CEA200FD84B2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -91,6 +138,7 @@
 				1B9D41E820D2CEA200FD84B2 /* SAPFioriFlows.framework in Embed Frameworks */,
 				1B9D41E420D2CEA200FD84B2 /* SAPFiori.framework in Embed Frameworks */,
 				1B9D41EE20D2CEA200FD84B2 /* SAPOfflineOData.framework in Embed Frameworks */,
+				1B749E7421E31CBC00F6DC98 /* TravelExpensesShared.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +156,18 @@
 		1B5F26D120D0D17E0073C63D /* SnapshotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotViewController.swift; sourceTree = "<group>"; };
 		1B5F26DA20D0F44A0073C63D /* CreateReportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportTableViewController.swift; sourceTree = "<group>"; };
 		1B7283C12126A97200D26ADE /* IMG_0268.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0268.JPG; sourceTree = "<group>"; };
+		1B749E4221E1A0D700F6DC98 /* TravelExpenses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TravelExpenses.entitlements; sourceTree = "<group>"; };
+		1B749E4721E1A19B00F6DC98 /* TravelExpensesIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TravelExpensesIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B749E4921E1A19B00F6DC98 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		1B749E4B21E1A19B00F6DC98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B749E5021E1A19B00F6DC98 /* TravelExpensesIntentUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TravelExpensesIntentUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B749E5121E1A19B00F6DC98 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		1B749E5421E1A19B00F6DC98 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		1B749E5721E1A19B00F6DC98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1B749E5921E1A19B00F6DC98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B749E6C21E31CBB00F6DC98 /* TravelExpensesShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TravelExpensesShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B749E6E21E31CBC00F6DC98 /* TravelExpensesShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelExpensesShared.h; sourceTree = "<group>"; };
+		1B749E6F21E31CBC00F6DC98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7BFD6B20F3AEBF003EB4C5 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		1B9D41DD20D2CEA100FD84B2 /* SAPFiori.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAPFiori.framework; path = "frameworks/Release-fat/SAPFiori.framework"; sourceTree = "<group>"; };
 		1B9D41DE20D2CEA100FD84B2 /* SAPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAPFoundation.framework; path = "frameworks/Release-fat/SAPFoundation.framework"; sourceTree = "<group>"; };
@@ -166,6 +226,30 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B749E4421E1A19B00F6DC98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B749E4D21E1A19B00F6DC98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B749E5221E1A19B00F6DC98 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B749E6921E31CBB00F6DC98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B749E7821E31CD600F6DC98 /* SAPOData.framework in Frameworks */,
+				1B749E7921E31CD600F6DC98 /* SAPOfflineOData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A1315B21D4B982000A5DA56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,6 +260,7 @@
 				1B9D41E720D2CEA200FD84B2 /* SAPFioriFlows.framework in Frameworks */,
 				1B9D41E320D2CEA200FD84B2 /* SAPFiori.framework in Frameworks */,
 				1B9D41ED20D2CEA200FD84B2 /* SAPOfflineOData.framework in Frameworks */,
+				1B749E7321E31CBC00F6DC98 /* TravelExpensesShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +299,6 @@
 		1B5F26CF20D096200073C63D /* Model Types */ = {
 			isa = PBXGroup;
 			children = (
-				1BC0428B20CCE18D008BF50D /* ExpenseReportItemType+Extensions.swift */,
-				1BC0428D20CCE18D008BF50D /* ExpenseItemType+Extensions.swift */,
 				AB8DC8F821B2AD3D003DF754 /* OfflineODataStoreState+Description.swift */,
 			);
 			name = "Model Types";
@@ -276,6 +359,38 @@
 			name = Expense;
 			sourceTree = "<group>";
 		};
+		1B749E4821E1A19B00F6DC98 /* TravelExpensesIntent */ = {
+			isa = PBXGroup;
+			children = (
+				1B749E4921E1A19B00F6DC98 /* IntentHandler.swift */,
+				1B749E4B21E1A19B00F6DC98 /* Info.plist */,
+			);
+			path = TravelExpensesIntent;
+			sourceTree = "<group>";
+		};
+		1B749E5321E1A19B00F6DC98 /* TravelExpensesIntentUI */ = {
+			isa = PBXGroup;
+			children = (
+				1B749E5421E1A19B00F6DC98 /* IntentViewController.swift */,
+				1B749E5621E1A19B00F6DC98 /* MainInterface.storyboard */,
+				1B749E5921E1A19B00F6DC98 /* Info.plist */,
+			);
+			path = TravelExpensesIntentUI;
+			sourceTree = "<group>";
+		};
+		1B749E6D21E31CBC00F6DC98 /* TravelExpensesShared */ = {
+			isa = PBXGroup;
+			children = (
+				1BC0428B20CCE18D008BF50D /* ExpenseReportItemType+Extensions.swift */,
+				1BC0428D20CCE18D008BF50D /* ExpenseItemType+Extensions.swift */,
+				1BC042A820CCEDF6008BF50D /* DataHandler.swift */,
+				75D373EF1DD1FB0800888D4C /* Proxy Classes */,
+				1B749E6E21E31CBC00F6DC98 /* TravelExpensesShared.h */,
+				1B749E6F21E31CBC00F6DC98 /* Info.plist */,
+			);
+			path = TravelExpensesShared;
+			sourceTree = "<group>";
+		};
 		1BC0428A20CCE18D008BF50D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,7 +441,7 @@
 				6C67CF5621AC48D4001440ED /* ExpenseItem.swift */,
 			);
 			name = public;
-			path = "Proxy Classes/com.sap.expense/public";
+			path = com.sap.expense/public;
 			sourceTree = "<group>";
 		};
 		6C67CF5721AC48D4001440ED /* internal */ = {
@@ -339,7 +454,7 @@
 				6C67CF5C21AC48D4001440ED /* TravelexpenseStaticResolver.swift */,
 			);
 			name = internal;
-			path = "Proxy Classes/com.sap.expense/internal";
+			path = com.sap.expense/internal;
 			sourceTree = "<group>";
 		};
 		7532C1BB1D5B6917004B03AF /* Model */ = {
@@ -353,9 +468,7 @@
 		755C10B41D5C63B000ECF6A2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				1BD76B6721DDCE8900AE658C /* Binding Prototype */,
 				6C9CD0ED2150ED8C00FAF1D9 /* ImageHandler.swift */,
-				1BC042A820CCEDF6008BF50D /* DataHandler.swift */,
 				7A9F6FF51F3883D3000A1815 /* SAPFioriLoadingIndicator.swift */,
 				1BC0428A20CCE18D008BF50D /* Extensions */,
 				1B5F26C420CF85A40073C63D /* PickerDataSources */,
@@ -369,7 +482,7 @@
 				6C67CF5721AC48D4001440ED /* internal */,
 				6C67CF4A21AC48D4001440ED /* public */,
 			);
-			name = "Proxy Classes";
+			path = "Proxy Classes";
 			sourceTree = "<group>";
 		};
 		7A1315AC1D4B982000A5DA56 = {
@@ -383,6 +496,9 @@
 				1B9D41E220D2CEA100FD84B2 /* SAPOfflineOData.framework */,
 				7A16F06C1FD1B3C700D2FABD /* README.md */,
 				7A1315B71D4B982000A5DA56 /* TravelExpenses */,
+				1B749E4821E1A19B00F6DC98 /* TravelExpensesIntent */,
+				1B749E5321E1A19B00F6DC98 /* TravelExpensesIntentUI */,
+				1B749E6D21E31CBC00F6DC98 /* TravelExpensesShared */,
 				7A1315B61D4B982000A5DA56 /* Products */,
 				7A1315CC1D4B990B00A5DA56 /* Frameworks */,
 			);
@@ -392,6 +508,9 @@
 			isa = PBXGroup;
 			children = (
 				7A1315B51D4B982000A5DA56 /* TravelExpenses.app */,
+				1B749E4721E1A19B00F6DC98 /* TravelExpensesIntent.appex */,
+				1B749E5021E1A19B00F6DC98 /* TravelExpensesIntentUI.appex */,
+				1B749E6C21E31CBB00F6DC98 /* TravelExpensesShared.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -399,10 +518,11 @@
 		7A1315B71D4B982000A5DA56 /* TravelExpenses */ = {
 			isa = PBXGroup;
 			children = (
+				1B749E4221E1A0D700F6DC98 /* TravelExpenses.entitlements */,
 				1BC0429120CCE27E008BF50D /* ViewControllers */,
 				12D066CB1F4DDAE40075EBA4 /* Onboarding */,
 				7532C1BB1D5B6917004B03AF /* Model */,
-				75D373EF1DD1FB0800888D4C /* Proxy Classes */,
+				1BD76B6721DDCE8900AE658C /* Binding Prototype */,
 				755C10B41D5C63B000ECF6A2 /* Utils */,
 				7A1315B81D4B982000A5DA56 /* AppDelegate.swift */,
 				7A1315C11D4B982000A5DA56 /* Assets.xcassets */,
@@ -419,13 +539,77 @@
 		7A1315CC1D4B990B00A5DA56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B749E5121E1A19B00F6DC98 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1B749E6721E31CBB00F6DC98 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B749E7021E31CBC00F6DC98 /* TravelExpensesShared.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		1B749E4621E1A19B00F6DC98 /* TravelExpensesIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B749E6321E1A19B00F6DC98 /* Build configuration list for PBXNativeTarget "TravelExpensesIntent" */;
+			buildPhases = (
+				1B749E4321E1A19B00F6DC98 /* Sources */,
+				1B749E4421E1A19B00F6DC98 /* Frameworks */,
+				1B749E4521E1A19B00F6DC98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TravelExpensesIntent;
+			productName = TravelExpensesIntent;
+			productReference = 1B749E4721E1A19B00F6DC98 /* TravelExpensesIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1B749E4F21E1A19B00F6DC98 /* TravelExpensesIntentUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B749E6021E1A19B00F6DC98 /* Build configuration list for PBXNativeTarget "TravelExpensesIntentUI" */;
+			buildPhases = (
+				1B749E4C21E1A19B00F6DC98 /* Sources */,
+				1B749E4D21E1A19B00F6DC98 /* Frameworks */,
+				1B749E4E21E1A19B00F6DC98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TravelExpensesIntentUI;
+			productName = TravelExpensesIntentUI;
+			productReference = 1B749E5021E1A19B00F6DC98 /* TravelExpensesIntentUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1B749E6B21E31CBB00F6DC98 /* TravelExpensesShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B749E7521E31CBC00F6DC98 /* Build configuration list for PBXNativeTarget "TravelExpensesShared" */;
+			buildPhases = (
+				1B749E6721E31CBB00F6DC98 /* Headers */,
+				1B749E6821E31CBB00F6DC98 /* Sources */,
+				1B749E6921E31CBB00F6DC98 /* Frameworks */,
+				1B749E6A21E31CBB00F6DC98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TravelExpensesShared;
+			productName = TravelExpensesShared;
+			productReference = 1B749E6C21E31CBB00F6DC98 /* TravelExpensesShared.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		7A1315B41D4B982000A5DA56 /* TravelExpenses */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A1315C91D4B982000A5DA56 /* Build configuration list for PBXNativeTarget "TravelExpenses" */;
@@ -434,10 +618,14 @@
 				7A1315B21D4B982000A5DA56 /* Frameworks */,
 				7A1315B31D4B982000A5DA56 /* Resources */,
 				1B9D41EF20D2CEA200FD84B2 /* Embed Frameworks */,
+				1B749E6621E1A19B00F6DC98 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1B749E5B21E1A19B00F6DC98 /* PBXTargetDependency */,
+				1B749E5E21E1A19B00F6DC98 /* PBXTargetDependency */,
+				1B749E7221E31CBC00F6DC98 /* PBXTargetDependency */,
 			);
 			name = TravelExpenses;
 			productName = TravelExpenses;
@@ -450,15 +638,35 @@
 		7A1315AD1D4B982000A5DA56 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = SAP;
 				TargetAttributes = {
+					1B749E4621E1A19B00F6DC98 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 6F9SQVL3N2;
+						ProvisioningStyle = Automatic;
+					};
+					1B749E4F21E1A19B00F6DC98 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 6F9SQVL3N2;
+						ProvisioningStyle = Automatic;
+					};
+					1B749E6B21E31CBB00F6DC98 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = 6F9SQVL3N2;
+						ProvisioningStyle = Automatic;
+					};
 					7A1315B41D4B982000A5DA56 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = J25PF2MPLA;
+						DevelopmentTeam = 6F9SQVL3N2;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -476,11 +684,36 @@
 			projectRoot = "";
 			targets = (
 				7A1315B41D4B982000A5DA56 /* TravelExpenses */,
+				1B749E4621E1A19B00F6DC98 /* TravelExpensesIntent */,
+				1B749E4F21E1A19B00F6DC98 /* TravelExpensesIntentUI */,
+				1B749E6B21E31CBB00F6DC98 /* TravelExpensesShared */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1B749E4521E1A19B00F6DC98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B749E4E21E1A19B00F6DC98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B749E5821E1A19B00F6DC98 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B749E6A21E31CBB00F6DC98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A1315B31D4B982000A5DA56 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -498,58 +731,81 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1B749E4321E1A19B00F6DC98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B749E4A21E1A19B00F6DC98 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B749E4C21E1A19B00F6DC98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B749E5521E1A19B00F6DC98 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B749E6821E31CBB00F6DC98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B749E8921E31CF600F6DC98 /* Expense.swift in Sources */,
+				1B749E8721E31CF600F6DC98 /* ExpenseItemAttachment.swift in Sources */,
+				1B749E7B21E31CEE00F6DC98 /* TravelexpenseMetadataParser.swift in Sources */,
+				1B749E7E21E31CEE00F6DC98 /* TravelexpenseStaticResolver.swift in Sources */,
+				1B749E8B21E31D0F00F6DC98 /* DataHandler.swift in Sources */,
+				1B749E8321E31CF600F6DC98 /* Reservation.swift in Sources */,
+				1B749E7D21E31CEE00F6DC98 /* TravelexpenseMetadataChanges.swift in Sources */,
+				1B749E8821E31CF600F6DC98 /* Travelexpense.swift in Sources */,
+				1B749E8021E31CF600F6DC98 /* TravelexpenseMetadata.swift in Sources */,
+				1B749E8A21E31CF600F6DC98 /* ExpenseItem.swift in Sources */,
+				1B749E8621E31CF600F6DC98 /* TripItem.swift in Sources */,
+				1B749E8121E31CF600F6DC98 /* Currency.swift in Sources */,
+				1B749E8221E31CF600F6DC98 /* ReportStatus.swift in Sources */,
+				1B749E7F21E31CF600F6DC98 /* ExpenseReportItem.swift in Sources */,
+				1B749E8E21E4688C00F6DC98 /* ExpenseItemType+Extensions.swift in Sources */,
+				1B749E8D21E4688C00F6DC98 /* ExpenseReportItemType+Extensions.swift in Sources */,
+				1B749E7C21E31CEE00F6DC98 /* TravelexpenseMetadataText.swift in Sources */,
+				1B749E8421E31CF600F6DC98 /* ReservationItem.swift in Sources */,
+				1B749E8521E31CF600F6DC98 /* Payment.swift in Sources */,
+				1B749E7A21E31CEE00F6DC98 /* TravelexpenseFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A1315B11D4B982000A5DA56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				12E84FE51F4ECF220061C99E /* OnboardingManager.swift in Sources */,
-				6C67CF5D21AC48D4001440ED /* ExpenseReportItem.swift in Sources */,
-				6C67CF6521AC48D4001440ED /* ExpenseItemAttachment.swift in Sources */,
-				6C67CF6C21AC48D4001440ED /* TravelexpenseMetadataChanges.swift in Sources */,
-				6C67CF6121AC48D4001440ED /* Reservation.swift in Sources */,
 				7A9F6FF61F3883D3000A1815 /* SAPFioriLoadingIndicator.swift in Sources */,
 				1BD76B7521DDD08A00AE658C /* BindingTableViewController.swift in Sources */,
 				12E07EF21E96851800460A94 /* CollectionType.swift in Sources */,
 				1BC0429D20CCE290008BF50D /* ExpenseDetailTableViewController.swift in Sources */,
-				6C67CF6321AC48D4001440ED /* Payment.swift in Sources */,
 				7A1315B91D4B982000A5DA56 /* AppDelegate.swift in Sources */,
 				1BD76B7321DDCFBA00AE658C /* SectionDataSourceImpl.swift in Sources */,
 				1BD76B6F21DDCF5700AE658C /* AnyCellBinding.swift in Sources */,
-				6C67CF6921AC48D4001440ED /* TravelexpenseFactory.swift in Sources */,
 				1BC042A120CCE290008BF50D /* FioriBaseTableViewController.swift in Sources */,
-				1BC0428E20CCE18D008BF50D /* ExpenseReportItemType+Extensions.swift in Sources */,
-				6C67CF6A21AC48D4001440ED /* TravelexpenseMetadataParser.swift in Sources */,
 				1B7BFD6C20F3AEBF003EB4C5 /* UITextField.swift in Sources */,
 				1BC042A320CCE290008BF50D /* ReportsTableViewController.swift in Sources */,
 				1BD76B6D21DDCF3600AE658C /* BindableTableViewCell.swift in Sources */,
 				6C9CD0EE2150ED8C00FAF1D9 /* ImageHandler.swift in Sources */,
 				1BC042A220CCE290008BF50D /* CreateExpenseTableViewController.swift in Sources */,
-				6C67CF6621AC48D4001440ED /* Travelexpense.swift in Sources */,
 				1BD76B6B21DDCF1500AE658C /* ReuseIdentifying.swift in Sources */,
-				6C67CF5F21AC48D4001440ED /* Currency.swift in Sources */,
 				1BC0429C20CCE290008BF50D /* EditExpenseTableViewController.swift in Sources */,
 				1BC042A020CCE290008BF50D /* TripsTableViewController.swift in Sources */,
-				6C67CF6821AC48D4001440ED /* ExpenseItem.swift in Sources */,
 				1B5F26C320CF85420073C63D /* PickableEntityType.swift in Sources */,
 				AB8DC8F921B2AD3D003DF754 /* OfflineODataStoreState+Description.swift in Sources */,
 				1BC0429E20CCE290008BF50D /* ReportDetailsTableViewController.swift in Sources */,
-				6C67CF5E21AC48D4001440ED /* TravelexpenseMetadata.swift in Sources */,
-				1BC042A920CCEDF6008BF50D /* DataHandler.swift in Sources */,
 				1BC0429B20CCE290008BF50D /* ExpensesTableViewController.swift in Sources */,
-				6C67CF6721AC48D4001440ED /* Expense.swift in Sources */,
-				6C67CF6021AC48D4001440ED /* ReportStatus.swift in Sources */,
 				1BD76B7121DDCF7B00AE658C /* SectionDataSource.swift in Sources */,
-				6C67CF6221AC48D4001440ED /* ReservationItem.swift in Sources */,
 				1B5F26DB20D0F44A0073C63D /* CreateReportTableViewController.swift in Sources */,
-				6C67CF6421AC48D4001440ED /* TripItem.swift in Sources */,
 				1B5F26C620CF85C90073C63D /* PickerDataSourceImplementations.swift in Sources */,
 				1B5F26C120CF84E30073C63D /* EntityTypePickerDataSource.swift in Sources */,
-				1BC0429020CCE18D008BF50D /* ExpenseItemType+Extensions.swift in Sources */,
 				1B5F26D220D0D17E0073C63D /* SnapshotViewController.swift in Sources */,
 				1BA1BFA520CF833C0067F0F0 /* BaseEntityTypePickerDataSource.swift in Sources */,
-				6C67CF6D21AC48D4001440ED /* TravelexpenseStaticResolver.swift in Sources */,
 				1BA1BFA720CF83C60067F0F0 /* Formatters.swift in Sources */,
-				6C67CF6B21AC48D4001440ED /* TravelexpenseMetadataText.swift in Sources */,
 				1BC0428F20CCE18D008BF50D /* FUIListPickerDataSource+Extensions.swift in Sources */,
 				1BD76B6921DDCF0100AE658C /* CellBinding.swift in Sources */,
 			);
@@ -557,7 +813,33 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1B749E5B21E1A19B00F6DC98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B749E4F21E1A19B00F6DC98 /* TravelExpensesIntentUI */;
+			targetProxy = 1B749E5A21E1A19B00F6DC98 /* PBXContainerItemProxy */;
+		};
+		1B749E5E21E1A19B00F6DC98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B749E4621E1A19B00F6DC98 /* TravelExpensesIntent */;
+			targetProxy = 1B749E5D21E1A19B00F6DC98 /* PBXContainerItemProxy */;
+		};
+		1B749E7221E31CBC00F6DC98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B749E6B21E31CBB00F6DC98 /* TravelExpensesShared */;
+			targetProxy = 1B749E7121E31CBC00F6DC98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1B749E5621E1A19B00F6DC98 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B749E5721E1A19B00F6DC98 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		7A1315C31D4B982000A5DA56 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -569,6 +851,171 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1B749E6121E1A19B00F6DC98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F9SQVL3N2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TravelExpensesIntentUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sstadelman.travelexpenses.TravelExpensesIntentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B749E6221E1A19B00F6DC98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F9SQVL3N2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TravelExpensesIntentUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sstadelman.travelexpenses.TravelExpensesIntentUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1B749E6421E1A19B00F6DC98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F9SQVL3N2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TravelExpensesIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sstadelman.travelexpenses.TravelExpensesIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B749E6521E1A19B00F6DC98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F9SQVL3N2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TravelExpensesIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sstadelman.travelexpenses.TravelExpensesIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1B749E7621E31CBC00F6DC98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6F9SQVL3N2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworks/Release-fat",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TravelExpensesShared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sap.TravelExpensesShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1B749E7721E31CBC00F6DC98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6F9SQVL3N2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworks/Release-fat",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TravelExpensesShared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sap.TravelExpensesShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		7A1315C71D4B982000A5DA56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -685,10 +1132,11 @@
 		7A1315CA1D4B982000A5DA56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = TravelExpenses/TravelExpenses.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = J25PF2MPLA;
+				DEVELOPMENT_TEAM = 6F9SQVL3N2;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -696,9 +1144,9 @@
 					"\"$(SRCROOT)/frameworks/Release$EFFECTIVE_PLATFORM_NAME\"",
 				);
 				INFOPLIST_FILE = TravelExpenses/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.i826182.travelexpenses;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sstadelman.travelexpenses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -707,10 +1155,11 @@
 		7A1315CB1D4B982000A5DA56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = TravelExpenses/TravelExpenses.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = J25PF2MPLA;
+				DEVELOPMENT_TEAM = 6F9SQVL3N2;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -718,9 +1167,9 @@
 					"\"$(SRCROOT)/frameworks/Release$EFFECTIVE_PLATFORM_NAME\"",
 				);
 				INFOPLIST_FILE = TravelExpenses/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.i826182.travelexpenses;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sstadelman.travelexpenses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -729,6 +1178,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B749E6021E1A19B00F6DC98 /* Build configuration list for PBXNativeTarget "TravelExpensesIntentUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B749E6121E1A19B00F6DC98 /* Debug */,
+				1B749E6221E1A19B00F6DC98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B749E6321E1A19B00F6DC98 /* Build configuration list for PBXNativeTarget "TravelExpensesIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B749E6421E1A19B00F6DC98 /* Debug */,
+				1B749E6521E1A19B00F6DC98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B749E7521E31CBC00F6DC98 /* Build configuration list for PBXNativeTarget "TravelExpensesShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B749E7621E31CBC00F6DC98 /* Debug */,
+				1B749E7721E31CBC00F6DC98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7A1315B01D4B982000A5DA56 /* Build configuration list for PBXProject "TravelExpenses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

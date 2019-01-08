@@ -9,6 +9,7 @@ import SAPCommon
 import SAPFiori
 import SAPFioriFlows
 import SAPFoundation
+import Intents
 
 protocol OnboardingManagerDelegate {
     /// Called either when Onboarding or Restoring is successfully executed.

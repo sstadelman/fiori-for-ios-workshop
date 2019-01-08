@@ -9,11 +9,12 @@
 import SAPFiori
 import UIKit
 import SAPOData
+import TravelExpensesShared
 
-extension ExpenseItem {
+public extension ExpenseItem {
     
     // Convenience method to get validation method for the different String type key paths of Expense Item
-    func validationMessage(for keyPath: KeyPath<ExpenseItem, String?>) -> String? {
+    public func validationMessage(for keyPath: KeyPath<ExpenseItem, String?>) -> String? {
         switch keyPath {
         case \.vendor:
             return self[keyPath: keyPath] == nil ? "Vendor is required" : nil
@@ -31,7 +32,7 @@ extension ExpenseItem {
     }
     
     // Convenience method to get validation method for the BigDecimal type key paths of Expense Item
-    func validationMessage(for keyPath: KeyPath<ExpenseItem, BigDecimal?>) -> String? {
+    public func validationMessage(for keyPath: KeyPath<ExpenseItem, BigDecimal?>) -> String? {
         switch keyPath {
         case \.amount:
             guard let value = self[keyPath: keyPath] else { return "\"Amount\" value is required." }
@@ -47,8 +48,8 @@ extension ExpenseItem {
 }
 
 
-extension ExpenseItem {
-    func iconImages() -> [FUIGlyphImage] {
+public extension ExpenseItem {
+    public func iconImages() -> [FUIGlyphImage] {
         let attachment = FUIAttributedImage(image: FUIIconLibrary.indicator.attachment.withRenderingMode(.alwaysTemplate))
         attachment.contentMode = .center
         attachment.tintColor = UIColor.preferredFioriColor(forStyle: .primary3)
@@ -92,9 +93,9 @@ extension ExpenseItem {
     }
 }
 
-extension ExpenseItem {
+public extension ExpenseItem {
     // get current currency for locale
-    func localCurrency() -> String {
+    public func localCurrency() -> String {
         let local = NSLocale.current.currencyCode ?? "USD"
         guard ["USD", "EUR", "GBP"].contains(local) else {
             return "USD"
@@ -103,7 +104,7 @@ extension ExpenseItem {
     }
     
     // get currency conversion for locale
-    func localCurrencyAmount() -> Double {
+    public func localCurrencyAmount() -> Double {
         
         guard let value = amount?.doubleValue() else { return 0 }
         let localeCode = currencyid ?? "USD"

@@ -11,9 +11,9 @@ import SAPOData
 import SAPOfflineOData
 
 /// Helper singleton, for accessing DataService from background threads
-class DataHandler {
-    static let downloadCompleteNotification = Notification.Name("com.sap.travelexpense.offline.downloadcomplete")
-    static let shared = DataHandler()
+public class DataHandler {
+    public static let downloadCompleteNotification = Notification.Name("com.sap.travelexpense.offline.downloadcomplete")
+    public static let shared = DataHandler()
     private init() {}
-    var service: Travelexpense<OfflineODataProvider>!
+    public var service: Travelexpense<OfflineODataProvider>!
 }

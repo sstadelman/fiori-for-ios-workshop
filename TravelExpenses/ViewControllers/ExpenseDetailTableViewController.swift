@@ -9,6 +9,7 @@
 import SAPFiori
 import UIKit
 import os.log
+import TravelExpensesShared
 
 class ExpenseDetailTableViewController: FUIFormTableViewController {
 

@@ -7,6 +7,7 @@
 
 import UIKit
 import UserNotifications
+import Intents
 
 import SAPCommon
 import SAPFiori
@@ -14,6 +15,7 @@ import SAPFioriFlows
 import SAPFoundation
 import SAPOData
 import SAPOfflineOData
+import TravelExpensesShared
 
 
 // -----------------------------------------------------------------------------
@@ -106,6 +108,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                 }
             }
             self.window!.rootViewController = rootViewController
+            
+            INPreferences.requestSiriAuthorization { (status) in
+                print(status)
+            }
         }
     }
 

@@ -8,6 +8,7 @@
 
 import UIKit
 import SAPOData
+import TravelExpensesShared
 
 extension ExpenseReportItem {
     

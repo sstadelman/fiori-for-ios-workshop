@@ -9,6 +9,7 @@
 import SAPFiori
 import SAPOData
 import UIKit
+import TravelExpensesShared
 
 /// Common implementation of `FUIListPickerDataSource`
 class BaseEntityTypePickerDataSource<EntityType: EntityValue & PickableEntityType>: EntityTypePickerDataSource, FUIListPickerDataSource {

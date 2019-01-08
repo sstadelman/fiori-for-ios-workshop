@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import TravelExpensesShared
 
 // Convenience protocol to define the UUID for list pickers bound to lists of EntityValue
 protocol PickableEntityType {

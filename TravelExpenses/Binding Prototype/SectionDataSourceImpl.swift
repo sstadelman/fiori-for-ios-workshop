@@ -8,6 +8,7 @@
 
 import UIKit
 import SAPOData
+import TravelExpensesShared
 
 class SectionDataSourceImpl<Binding: CellBinding>: SectionDataSource {
     

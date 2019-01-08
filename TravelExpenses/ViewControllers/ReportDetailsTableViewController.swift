@@ -9,6 +9,7 @@
 import SAPFiori
 import SAPOData
 import UIKit
+import TravelExpensesShared
 
 class ReportDetailsTableViewController: FioriBaseTableViewController {
 
