@@ -48,6 +48,10 @@
 		1B749E8B21E31D0F00F6DC98 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042A820CCEDF6008BF50D /* DataHandler.swift */; };
 		1B749E8D21E4688C00F6DC98 /* ExpenseReportItemType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0428B20CCE18D008BF50D /* ExpenseReportItemType+Extensions.swift */; };
 		1B749E8E21E4688C00F6DC98 /* ExpenseItemType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0428D20CCE18D008BF50D /* ExpenseItemType+Extensions.swift */; };
+		1B749E9021E46EAC00F6DC98 /* TravelExpenses.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1B749E8F21E46EAC00F6DC98 /* TravelExpenses.intentdefinition */; };
+		1B749E9121E472C000F6DC98 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1BFA620CF83C60067F0F0 /* Formatters.swift */; };
+		1B749E9321E475B900F6DC98 /* ReportIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B749E9221E475B900F6DC98 /* ReportIntentHandler.swift */; };
+		1B749E9421E4796D00F6DC98 /* TravelExpensesShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B749E6C21E31CBB00F6DC98 /* TravelExpensesShared.framework */; };
 		1B7BFD6C20F3AEBF003EB4C5 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7BFD6B20F3AEBF003EB4C5 /* UITextField.swift */; };
 		1B9D41E320D2CEA200FD84B2 /* SAPFiori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9D41DD20D2CEA100FD84B2 /* SAPFiori.framework */; };
 		1B9D41E420D2CEA200FD84B2 /* SAPFiori.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9D41DD20D2CEA100FD84B2 /* SAPFiori.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -62,7 +66,6 @@
 		1B9D41ED20D2CEA200FD84B2 /* SAPOfflineOData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9D41E220D2CEA100FD84B2 /* SAPOfflineOData.framework */; };
 		1B9D41EE20D2CEA200FD84B2 /* SAPOfflineOData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9D41E220D2CEA100FD84B2 /* SAPOfflineOData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1BA1BFA520CF833C0067F0F0 /* BaseEntityTypePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1BFA420CF833C0067F0F0 /* BaseEntityTypePickerDataSource.swift */; };
-		1BA1BFA720CF83C60067F0F0 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1BFA620CF83C60067F0F0 /* Formatters.swift */; };
 		1BC0428F20CCE18D008BF50D /* FUIListPickerDataSource+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0428C20CCE18D008BF50D /* FUIListPickerDataSource+Extensions.swift */; };
 		1BC0429B20CCE290008BF50D /* ExpensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429220CCE28F008BF50D /* ExpensesTableViewController.swift */; };
 		1BC0429C20CCE290008BF50D /* EditExpenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429320CCE28F008BF50D /* EditExpenseTableViewController.swift */; };
@@ -168,6 +171,8 @@
 		1B749E6C21E31CBB00F6DC98 /* TravelExpensesShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TravelExpensesShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B749E6E21E31CBC00F6DC98 /* TravelExpensesShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelExpensesShared.h; sourceTree = "<group>"; };
 		1B749E6F21E31CBC00F6DC98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B749E8F21E46EAC00F6DC98 /* TravelExpenses.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TravelExpenses.intentdefinition; sourceTree = "<group>"; };
+		1B749E9221E475B900F6DC98 /* ReportIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportIntentHandler.swift; sourceTree = "<group>"; };
 		1B7BFD6B20F3AEBF003EB4C5 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		1B9D41DD20D2CEA100FD84B2 /* SAPFiori.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAPFiori.framework; path = "frameworks/Release-fat/SAPFiori.framework"; sourceTree = "<group>"; };
 		1B9D41DE20D2CEA100FD84B2 /* SAPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAPFoundation.framework; path = "frameworks/Release-fat/SAPFoundation.framework"; sourceTree = "<group>"; };
@@ -230,6 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B749E9421E4796D00F6DC98 /* TravelExpensesShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +296,6 @@
 		1B5F26CE20D096130073C63D /* iOS Types */ = {
 			isa = PBXGroup;
 			children = (
-				1BA1BFA620CF83C60067F0F0 /* Formatters.swift */,
 				1B7BFD6B20F3AEBF003EB4C5 /* UITextField.swift */,
 			);
 			name = "iOS Types";
@@ -381,12 +386,15 @@
 		1B749E6D21E31CBC00F6DC98 /* TravelExpensesShared */ = {
 			isa = PBXGroup;
 			children = (
+				1BA1BFA620CF83C60067F0F0 /* Formatters.swift */,
 				1BC0428B20CCE18D008BF50D /* ExpenseReportItemType+Extensions.swift */,
 				1BC0428D20CCE18D008BF50D /* ExpenseItemType+Extensions.swift */,
 				1BC042A820CCEDF6008BF50D /* DataHandler.swift */,
 				75D373EF1DD1FB0800888D4C /* Proxy Classes */,
 				1B749E6E21E31CBC00F6DC98 /* TravelExpensesShared.h */,
 				1B749E6F21E31CBC00F6DC98 /* Info.plist */,
+				1B749E8F21E46EAC00F6DC98 /* TravelExpenses.intentdefinition */,
+				1B749E9221E475B900F6DC98 /* ReportIntentHandler.swift */,
 			);
 			path = TravelExpensesShared;
 			sourceTree = "<group>";
@@ -753,6 +761,8 @@
 			files = (
 				1B749E8921E31CF600F6DC98 /* Expense.swift in Sources */,
 				1B749E8721E31CF600F6DC98 /* ExpenseItemAttachment.swift in Sources */,
+				1B749E9121E472C000F6DC98 /* Formatters.swift in Sources */,
+				1B749E9321E475B900F6DC98 /* ReportIntentHandler.swift in Sources */,
 				1B749E7B21E31CEE00F6DC98 /* TravelexpenseMetadataParser.swift in Sources */,
 				1B749E7E21E31CEE00F6DC98 /* TravelexpenseStaticResolver.swift in Sources */,
 				1B749E8B21E31D0F00F6DC98 /* DataHandler.swift in Sources */,
@@ -765,6 +775,7 @@
 				1B749E8121E31CF600F6DC98 /* Currency.swift in Sources */,
 				1B749E8221E31CF600F6DC98 /* ReportStatus.swift in Sources */,
 				1B749E7F21E31CF600F6DC98 /* ExpenseReportItem.swift in Sources */,
+				1B749E9021E46EAC00F6DC98 /* TravelExpenses.intentdefinition in Sources */,
 				1B749E8E21E4688C00F6DC98 /* ExpenseItemType+Extensions.swift in Sources */,
 				1B749E8D21E4688C00F6DC98 /* ExpenseReportItemType+Extensions.swift in Sources */,
 				1B749E7C21E31CEE00F6DC98 /* TravelexpenseMetadataText.swift in Sources */,
@@ -805,7 +816,6 @@
 				1B5F26C120CF84E30073C63D /* EntityTypePickerDataSource.swift in Sources */,
 				1B5F26D220D0D17E0073C63D /* SnapshotViewController.swift in Sources */,
 				1BA1BFA520CF833C0067F0F0 /* BaseEntityTypePickerDataSource.swift in Sources */,
-				1BA1BFA720CF83C60067F0F0 /* Formatters.swift in Sources */,
 				1BC0428F20CCE18D008BF50D /* FUIListPickerDataSource+Extensions.swift in Sources */,
 				1BD76B6921DDCF0100AE658C /* CellBinding.swift in Sources */,
 			);
@@ -908,6 +918,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F9SQVL3N2;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Build/Products/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/\"";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = TravelExpensesIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -932,6 +943,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6F9SQVL3N2;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Build/Products/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/\"";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = TravelExpensesIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;

@@ -9,14 +9,14 @@
 import UIKit
 
 extension DateFormatter {
-    convenience init(_ dateStyle: DateFormatter.Style) {
+    public convenience init(_ dateStyle: DateFormatter.Style) {
         self.init()
         self.dateStyle = dateStyle
     }
 }
 
 extension NumberFormatter {
-    convenience init(_ numberStyle: NumberFormatter.Style) {
+    public convenience init(_ numberStyle: NumberFormatter.Style) {
         self.init()
         self.numberStyle = numberStyle
     }

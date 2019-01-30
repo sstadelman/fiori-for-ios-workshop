@@ -45,6 +45,8 @@ class ReportsTableViewController: BindingTableViewController {
             NotificationCenter.default.removeObserver(downloadCompleteObserver)
         }
     }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,23 +59,11 @@ class ReportsTableViewController: BindingTableViewController {
             self.reloadReports()
         }
         
-        registerDataBinding(AnyCellBinding(ReportBinding()), forSection: 0, with: self.reportQuery(isActive: true))
-        registerDataBinding(AnyCellBinding(ReportBinding()), forSection: 1, with: self.reportQuery(isActive: false))
+        registerDataBinding(AnyCellBinding(ReportBinding()), forSection: 0, with: AnyDataFetching(ReportFetching(isActive: true)))
+        registerDataBinding(AnyCellBinding(ReportBinding()), forSection: 1, with: AnyDataFetching(ReportFetching(isActive: false)))
     }
     
-    func reportQuery(isActive: Bool) -> DataQuery {
-        
-        let activeFilter = isActive ? ExpenseReportItem.reportstatusid.equal("ACT") : ExpenseReportItem.reportstatusid.notEqual("ACT")
-        
-        let nestedQuery = DataQuery()
-            .expand(ExpenseItem.currency, ExpenseItem.expenseType, ExpenseItem.paymentType, ExpenseItem.attachments)
-            .orderBy(ExpenseItem.itemdate)
-        
-        return DataQuery()
-            .from(TravelexpenseMetadata.EntitySets.expenseReports)
-            .filter(activeFilter)
-            .expand(ExpenseReportItem.expenseItems, withQuery: nestedQuery)
-    }
+    
 
 
     override func viewWillAppear(_ animated: Bool) {
@@ -118,13 +108,38 @@ class ReportsTableViewController: BindingTableViewController {
             return cell
         }
         
-        func bindDidSelect(cell: FUIObjectTableViewCell, with data: ExpenseReportItem, in viewController: UIViewController) {
+        func bindDidSelectHandler(cell: FUIObjectTableViewCell, with data: ExpenseReportItem, in viewController: UIViewController) {
             
             let reportDetail = ReportDetailsTableViewController(style: .grouped)
             reportDetail.setReport(data)
             viewController.navigationController?.pushViewController(reportDetail, animated: true)
         }
     }
+    
+    struct ReportFetching: DataFetching {
+        let query: DataQuery
+        
+        var didFetchHandler: (([ExpenseReportItem]) -> Void)? = {
+            for entity in $0 {
+                print("adding intent for: \(entity.debugDescription)")
+            }
+        }
+
+        init(isActive: Bool) {
+            
+            let activeFilter = isActive ? ExpenseReportItem.reportstatusid.equal("ACT") : ExpenseReportItem.reportstatusid.notEqual("ACT")
+            
+            let nestedQuery = DataQuery()
+                .expand(ExpenseItem.currency, ExpenseItem.expenseType, ExpenseItem.paymentType, ExpenseItem.attachments)
+                .orderBy(ExpenseItem.itemdate)
+            
+            self.query = DataQuery()
+                .from(TravelexpenseMetadata.EntitySets.expenseReports)
+                .filter(activeFilter)
+                .expand(ExpenseReportItem.expenseItems, withQuery: nestedQuery)
+        }
+    }
+    
 
 override func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
     switch section {

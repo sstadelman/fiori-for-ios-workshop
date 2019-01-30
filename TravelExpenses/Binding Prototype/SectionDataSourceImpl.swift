@@ -10,12 +10,12 @@ import UIKit
 import SAPOData
 import TravelExpensesShared
 
-class SectionDataSourceImpl<Binding: CellBinding>: SectionDataSource {
+class SectionDataSourceImpl<Binding: CellBinding, Fetching: DataFetching>: SectionDataSource where Binding.Data == Fetching.Data {
     
-    init(binding: Binding, to query: DataQuery, for section: Int, in tableView: UITableView, viewController: UIViewController) {
+    init(binding: Binding, to fetching: Fetching, for section: Int, in tableView: UITableView, viewController: UIViewController) {
         self.binding = binding
         self.section = section
-        self.query = query
+        self.fetching = fetching
         self.tableView = tableView
         self.viewController = viewController
         
@@ -24,7 +24,7 @@ class SectionDataSourceImpl<Binding: CellBinding>: SectionDataSource {
     
     var section: Int
     let binding: Binding
-    let query: DataQuery
+    let fetching: Fetching
     var entities: [Binding.Data] = [] {
         didSet {
             let diffIndexPaths = self.entities.diffIndexes(with: oldValue).map { IndexPath(row: $0, section: self.section) }
@@ -60,14 +60,16 @@ class SectionDataSourceImpl<Binding: CellBinding>: SectionDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Binding.Cell.reuseIdentifier, for: IndexPath(row: index, section: self.section)) as? Binding.Cell,
         let viewController = self.viewController else { return }
         let entity = self.entities[index]
-        binding.bindDidSelect(cell: cell, with: entity, in: viewController)
+        binding.bindDidSelectHandler(cell: cell, with: entity, in: viewController)
     }
     
     func refresh() {
-        DataHandler.shared.service.executeQuery(query) { [weak self] entities, error in
+        DataHandler.shared.service.executeQuery(fetching.query) { [weak self] entities, error in
             guard let entities = entities else { return print(String(describing: error)) }
             do {
-                self?.entities = try entities.entityList().toArray() as! [Binding.Data]
+                let entities = try entities.entityList().toArray() as! [Binding.Data]
+                self?.fetching.didFetchHandler?(entities)
+                self?.entities = entities
             }
             catch {
                 print(error)

@@ -9,7 +9,6 @@
 import SAPFiori
 import UIKit
 import SAPOData
-import TravelExpensesShared
 
 public extension ExpenseItem {
     

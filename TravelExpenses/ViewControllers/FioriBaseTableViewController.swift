@@ -40,6 +40,7 @@ class FioriBaseTableViewController: UITableViewController {
     }
     
     @objc func refresh() {
+        /*(
         DataHandler.shared.service.provider.upload(completionHandler: { [weak self] error in
             guard error == nil else {
                 DispatchQueue.main.async {
@@ -59,6 +60,7 @@ class FioriBaseTableViewController: UITableViewController {
                 print("Offline Store is downloaded by refresh control")
             })
         })
+ */
     }
     
     

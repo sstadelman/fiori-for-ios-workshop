@@ -8,12 +8,11 @@
 
 import UIKit
 import SAPOData
-import TravelExpensesShared
 
 extension ExpenseReportItem {
     
     // Convenience method to format start & finish date for Expense Report
-    func rangeString() -> String {
+    public func rangeString() -> String {
         guard let reportStart = reportstart, let reportEnd = reportend else {
             return ""
         }
@@ -21,7 +20,7 @@ extension ExpenseReportItem {
     }
     
     // Convenience method to get validation method for the different String type key paths of Report
-    func validationMessage(for keyPath: KeyPath<ExpenseReportItem, String?>) -> String? {
+    public func validationMessage(for keyPath: KeyPath<ExpenseReportItem, String?>) -> String? {
         switch keyPath {
         case \.reportname:
             return self[keyPath: keyPath] == nil ? "Please provide a name for your Report" : nil

@@ -15,14 +15,14 @@ struct AnyCellBinding<Data: Equatable, Cell: ReuseIdentifying & BindableTableVie
     
     init<Binding: CellBinding>(_ base: Binding) where Data == Binding.Data, Cell == Binding.Cell {
         _bind = base.bind
-        _bindDidSelect = base.bindDidSelect
+        _bindDidSelect = base.bindDidSelectHandler
     }
     
     func bind(data: Data, to cell: Cell) -> Cell {
         return _bind(data, cell)
     }
     
-    func bindDidSelect(cell: Cell, with data: Data, in viewController: UIViewController) {
+    func bindDidSelectHandler(cell: Cell, with data: Data, in viewController: UIViewController) {
         return _bindDidSelect(cell, data, viewController)
     }
 }

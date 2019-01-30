@@ -10,16 +10,33 @@ import UIKit
 import SAPFiori
 import SAPOData
 
+protocol DataFetching {
+    associatedtype Data: Equatable
+    
+    var query: DataQuery { get }
+    var didFetchHandler: (([Data]) -> Void)? { get }
+}
+
+struct AnyDataFetching<Data: Equatable>: DataFetching {
+    let query: DataQuery
+    let didFetchHandler: (([Data]) -> Void)?
+
+    init<Binding: DataFetching>(_ base: Binding) where Data == Binding.Data {
+        query = base.query
+        didFetchHandler = base.didFetchHandler
+    }
+}
+
 class BindingTableViewController: FioriBaseTableViewController, UITableViewDataSourcePrefetching {
 
     // MARK: - Bindings model
     
     var dataSources: [Int: SectionDataSource] = [:]
     
-    func registerDataBinding<Data, Cell: UITableViewCell & ReuseIdentifying>(_ dataBinding: AnyCellBinding<Data, Cell>, forSection section: Int, with dataQuery: DataQuery) {
+    func registerDataBinding<Data, Cell: UITableViewCell & ReuseIdentifying>(_ dataBinding: AnyCellBinding<Data, Cell>, forSection section: Int, with dataFetching: AnyDataFetching<Data>) {
         
         self.tableView.register(Cell.self, forCellReuseIdentifier: Cell.reuseIdentifier)
-        let dataSource = SectionDataSourceImpl<AnyCellBinding<Data, Cell>>(binding: dataBinding, to: dataQuery, for: section, in: tableView, viewController: self)
+        let dataSource = SectionDataSourceImpl<AnyCellBinding<Data, Cell>, AnyDataFetching<Data>>(binding: dataBinding, to: dataFetching, for: section, in: tableView, viewController: self)
         self.dataSources.updateValue(dataSource, forKey: section)
     }
     
