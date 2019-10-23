@@ -15,5 +15,5 @@ class DataHandler {
     static let downloadCompleteNotification = Notification.Name("com.sap.travelexpense.offline.downloadcomplete")
     static let shared = DataHandler()
     private init() {}
-    var service: Travelexpense<OfflineODataProvider>!
+    var service: EntityContainer<OfflineODataProvider>!
 }
