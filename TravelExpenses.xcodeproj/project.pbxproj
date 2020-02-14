@@ -3,19 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0AD88E5C943B5903B85D2395 /* TripItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C127397D40A7C6EDF4BF4952 /* TripItemType.swift */; };
 		0D7CAD6651744934BB8C6B37 /* ExpenseReportItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869A19D1F3434AAF38A8372A /* ExpenseReportItemType.swift */; };
 		1277F7611F8E66AF0060AF58 /* SAPLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */; };
-		128604DA1E55B41600C698B5 /* SAPCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128604D91E55B41600C698B5 /* SAPCommon.framework */; };
-		128604DB1E55B43B00C698B5 /* SAPCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 128604D91E55B41600C698B5 /* SAPCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		12D066CF1F4DDB0E0075EBA4 /* ConfigurationProvider.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12D066CE1F4DDB0A0075EBA4 /* ConfigurationProvider.plist */; };
 		12E07EF21E96851800460A94 /* CollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E07EF11E96851800460A94 /* CollectionType.swift */; };
-		12E84FE31F4ECC4A0061C99E /* SAPFioriFlows.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E84FE21F4ECC3E0061C99E /* SAPFioriFlows.framework */; };
-		12E84FE41F4ECC4A0061C99E /* SAPFioriFlows.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12E84FE21F4ECC3E0061C99E /* SAPFioriFlows.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		12E84FE51F4ECF220061C99E /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E84FDE1F4EBD460061C99E /* OnboardingManager.swift */; };
 		1B5F26C120CF84E30073C63D /* EntityTypePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F26C020CF84E30073C63D /* EntityTypePickerDataSource.swift */; };
 		1B5F26C320CF85420073C63D /* PickableEntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F26C220CF85420073C63D /* PickableEntityType.swift */; };
@@ -37,19 +33,23 @@
 		1BC042A220CCE290008BF50D /* CreateExpenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429920CCE28F008BF50D /* CreateExpenseTableViewController.swift */; };
 		1BC042A320CCE290008BF50D /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0429A20CCE290008BF50D /* ReportsTableViewController.swift */; };
 		1BC042A920CCEDF6008BF50D /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042A820CCEDF6008BF50D /* DataHandler.swift */; };
+		1BCFABFD23F7172800BAF3B6 /* SAPFiori.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABF723F7172800BAF3B6 /* SAPFiori.xcframework */; };
+		1BCFABFE23F7172800BAF3B6 /* SAPFiori.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABF723F7172800BAF3B6 /* SAPFiori.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1BCFABFF23F7172800BAF3B6 /* SAPCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABF823F7172800BAF3B6 /* SAPCommon.xcframework */; };
+		1BCFAC0023F7172800BAF3B6 /* SAPCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABF823F7172800BAF3B6 /* SAPCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1BCFAC0123F7172800BAF3B6 /* SAPFioriFlows.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABF923F7172800BAF3B6 /* SAPFioriFlows.xcframework */; };
+		1BCFAC0223F7172800BAF3B6 /* SAPFioriFlows.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABF923F7172800BAF3B6 /* SAPFioriFlows.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1BCFAC0323F7172800BAF3B6 /* SAPOData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABFA23F7172800BAF3B6 /* SAPOData.xcframework */; };
+		1BCFAC0423F7172800BAF3B6 /* SAPOData.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABFA23F7172800BAF3B6 /* SAPOData.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1BCFAC0523F7172800BAF3B6 /* SAPOfflineOData.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABFB23F7172800BAF3B6 /* SAPOfflineOData.xcframework */; };
+		1BCFAC0623F7172800BAF3B6 /* SAPOfflineOData.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABFB23F7172800BAF3B6 /* SAPOfflineOData.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		1BCFAC0723F7172800BAF3B6 /* SAPFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABFC23F7172800BAF3B6 /* SAPFoundation.xcframework */; };
+		1BCFAC0823F7172800BAF3B6 /* SAPFoundation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFABFC23F7172800BAF3B6 /* SAPFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		25D82E417FAE59DC7E2D3409 /* TravelexpenseMetadataChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F0E89819B7E84A7A8728C1 /* TravelexpenseMetadataChanges.swift */; };
 		374A059D97E1D6599D4BEEEC /* TravelexpenseMetadataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B82895CB9689A78C6E95FF7 /* TravelexpenseMetadataParser.swift */; };
 		47417C53AAE29967B55684A6 /* TravelexpenseMetadataText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C725A02B23CC11FC74C5E08 /* TravelexpenseMetadataText.swift */; };
 		666D56B2714F06BEFC64FC8B /* ExpenseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EB4170B4F5FC835970650 /* ExpenseType.swift */; };
 		687E3150709C9A7729BA425B /* TravelexpenseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E513FE41D8B0CBE362550A1B /* TravelexpenseFactory.swift */; };
-		755533981F25FD330017A1BC /* SAPOfflineOData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755533971F25FD2A0017A1BC /* SAPOfflineOData.framework */; };
-		755533991F25FD330017A1BC /* SAPOfflineOData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 755533971F25FD2A0017A1BC /* SAPOfflineOData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		756192211DBE1A99007F562C /* SAPOData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7561921A1DBE1A90007F562C /* SAPOData.framework */; };
-		756192221DBE1A99007F562C /* SAPOData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7561921A1DBE1A90007F562C /* SAPOData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7569DA531E5C717C00C5D751 /* SAPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DA511E5C716A00C5D751 /* SAPFoundation.framework */; };
-		7569DA541E5C717C00C5D751 /* SAPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7569DA511E5C716A00C5D751 /* SAPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		759BA2701E6821A7001C32BA /* SAPFiori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759BA26F1E6821A7001C32BA /* SAPFiori.framework */; };
-		759BA2721E6821AF001C32BA /* SAPFiori.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 759BA26F1E6821A7001C32BA /* SAPFiori.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A1315B91D4B982000A5DA56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1315B81D4B982000A5DA56 /* AppDelegate.swift */; };
 		7A1315C21D4B982000A5DA56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1315C11D4B982000A5DA56 /* Assets.xcassets */; };
 		7A1315C51D4B982000A5DA56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1315C31D4B982000A5DA56 /* LaunchScreen.storyboard */; };
@@ -67,18 +67,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		758AC1C31D5A265200311F39 /* Embed Frameworks */ = {
+		1BCFAC0923F7172800BAF3B6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7569DA541E5C717C00C5D751 /* SAPFoundation.framework in Embed Frameworks */,
-				12E84FE41F4ECC4A0061C99E /* SAPFioriFlows.framework in Embed Frameworks */,
-				128604DB1E55B43B00C698B5 /* SAPCommon.framework in Embed Frameworks */,
-				755533991F25FD330017A1BC /* SAPOfflineOData.framework in Embed Frameworks */,
-				756192221DBE1A99007F562C /* SAPOData.framework in Embed Frameworks */,
-				759BA2721E6821AF001C32BA /* SAPFiori.framework in Embed Frameworks */,
+				1BCFAC0623F7172800BAF3B6 /* SAPOfflineOData.xcframework in Embed Frameworks */,
+				1BCFAC0423F7172800BAF3B6 /* SAPOData.xcframework in Embed Frameworks */,
+				1BCFAC0223F7172800BAF3B6 /* SAPFioriFlows.xcframework in Embed Frameworks */,
+				1BCFAC0823F7172800BAF3B6 /* SAPFoundation.xcframework in Embed Frameworks */,
+				1BCFABFE23F7172800BAF3B6 /* SAPFiori.xcframework in Embed Frameworks */,
+				1BCFAC0023F7172800BAF3B6 /* SAPCommon.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,11 +87,9 @@
 
 /* Begin PBXFileReference section */
 		1277F7601F8E66AC0060AF58 /* SAPLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SAPLogo@2x.png"; sourceTree = "<group>"; };
-		128604D91E55B41600C698B5 /* SAPCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPCommon.framework; sourceTree = "<group>"; };
 		12D066CE1F4DDB0A0075EBA4 /* ConfigurationProvider.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ConfigurationProvider.plist; sourceTree = "<group>"; };
 		12E07EF11E96851800460A94 /* CollectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionType.swift; sourceTree = "<group>"; };
 		12E84FDE1F4EBD460061C99E /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
-		12E84FE21F4ECC3E0061C99E /* SAPFioriFlows.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPFioriFlows.framework; sourceTree = "<group>"; };
 		1B5F26C020CF84E30073C63D /* EntityTypePickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTypePickerDataSource.swift; sourceTree = "<group>"; };
 		1B5F26C220CF85420073C63D /* PickableEntityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickableEntityType.swift; path = Extensions/PickableEntityType.swift; sourceTree = "<group>"; };
 		1B5F26C520CF85C90073C63D /* PickerDataSourceImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataSourceImplementations.swift; sourceTree = "<group>"; };
@@ -112,14 +110,17 @@
 		1BC0429920CCE28F008BF50D /* CreateExpenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateExpenseTableViewController.swift; sourceTree = "<group>"; };
 		1BC0429A20CCE290008BF50D /* ReportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportsTableViewController.swift; sourceTree = "<group>"; };
 		1BC042A820CCEDF6008BF50D /* DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		1BCFABF723F7172800BAF3B6 /* SAPFiori.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SAPFiori.xcframework; path = "frameworks/Release-xcframework/SAPFiori.xcframework"; sourceTree = "<group>"; };
+		1BCFABF823F7172800BAF3B6 /* SAPCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SAPCommon.xcframework; path = "frameworks/Release-xcframework/SAPCommon.xcframework"; sourceTree = "<group>"; };
+		1BCFABF923F7172800BAF3B6 /* SAPFioriFlows.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SAPFioriFlows.xcframework; path = "frameworks/Release-xcframework/SAPFioriFlows.xcframework"; sourceTree = "<group>"; };
+		1BCFABFA23F7172800BAF3B6 /* SAPOData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SAPOData.xcframework; path = "frameworks/Release-xcframework/SAPOData.xcframework"; sourceTree = "<group>"; };
+		1BCFABFB23F7172800BAF3B6 /* SAPOfflineOData.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SAPOfflineOData.xcframework; path = "frameworks/Release-xcframework/SAPOfflineOData.xcframework"; sourceTree = "<group>"; };
+		1BCFABFC23F7172800BAF3B6 /* SAPFoundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SAPFoundation.xcframework; path = "frameworks/Release-xcframework/SAPFoundation.xcframework"; sourceTree = "<group>"; };
+		1BCFAC0A23F7176100BAF3B6 /* TravelExpenses.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TravelExpenses.entitlements; sourceTree = "<group>"; };
 		2B82895CB9689A78C6E95FF7 /* TravelexpenseMetadataParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TravelexpenseMetadataParser.swift; path = "Proxy Classes/com.sap.expense/internal/TravelexpenseMetadataParser.swift"; sourceTree = "<group>"; };
 		3BDDDC45B59B840DAE7A3C04 /* TravelexpenseStaticResolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TravelexpenseStaticResolver.swift; path = "Proxy Classes/com.sap.expense/internal/TravelexpenseStaticResolver.swift"; sourceTree = "<group>"; };
 		3C725A02B23CC11FC74C5E08 /* TravelexpenseMetadataText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TravelexpenseMetadataText.swift; path = "Proxy Classes/com.sap.expense/internal/TravelexpenseMetadataText.swift"; sourceTree = "<group>"; };
-		755533971F25FD2A0017A1BC /* SAPOfflineOData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPOfflineOData.framework; sourceTree = "<group>"; };
-		7561921A1DBE1A90007F562C /* SAPOData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPOData.framework; sourceTree = "<group>"; };
-		7569DA511E5C716A00C5D751 /* SAPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPFoundation.framework; sourceTree = "<group>"; };
 		7578E28D2951A6D8AFF3DF4A /* ReportStatusType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReportStatusType.swift; path = "Proxy Classes/com.sap.expense/public/ReportStatusType.swift"; sourceTree = "<group>"; };
-		759BA26F1E6821A7001C32BA /* SAPFiori.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SAPFiori.framework; sourceTree = "<group>"; };
 		7A1315B51D4B982000A5DA56 /* TravelExpenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelExpenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1315B81D4B982000A5DA56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A1315C11D4B982000A5DA56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,12 +147,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7569DA531E5C717C00C5D751 /* SAPFoundation.framework in Frameworks */,
-				12E84FE31F4ECC4A0061C99E /* SAPFioriFlows.framework in Frameworks */,
-				756192211DBE1A99007F562C /* SAPOData.framework in Frameworks */,
-				755533981F25FD330017A1BC /* SAPOfflineOData.framework in Frameworks */,
-				128604DA1E55B41600C698B5 /* SAPCommon.framework in Frameworks */,
-				759BA2701E6821A7001C32BA /* SAPFiori.framework in Frameworks */,
+				1BCFAC0523F7172800BAF3B6 /* SAPOfflineOData.xcframework in Frameworks */,
+				1BCFAC0323F7172800BAF3B6 /* SAPOData.xcframework in Frameworks */,
+				1BCFAC0123F7172800BAF3B6 /* SAPFioriFlows.xcframework in Frameworks */,
+				1BCFAC0723F7172800BAF3B6 /* SAPFoundation.xcframework in Frameworks */,
+				1BCFABFD23F7172800BAF3B6 /* SAPFiori.xcframework in Frameworks */,
+				1BCFABFF23F7172800BAF3B6 /* SAPCommon.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +332,7 @@
 		7A1315B71D4B982000A5DA56 /* TravelExpenses */ = {
 			isa = PBXGroup;
 			children = (
+				1BCFAC0A23F7176100BAF3B6 /* TravelExpenses.entitlements */,
 				1BC0429120CCE27E008BF50D /* ViewControllers */,
 				12D066CB1F4DDAE40075EBA4 /* Onboarding */,
 				7532C1BB1D5B6917004B03AF /* Model */,
@@ -349,12 +351,12 @@
 		7A1315CC1D4B990B00A5DA56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				12E84FE21F4ECC3E0061C99E /* SAPFioriFlows.framework */,
-				755533971F25FD2A0017A1BC /* SAPOfflineOData.framework */,
-				759BA26F1E6821A7001C32BA /* SAPFiori.framework */,
-				7569DA511E5C716A00C5D751 /* SAPFoundation.framework */,
-				7561921A1DBE1A90007F562C /* SAPOData.framework */,
-				128604D91E55B41600C698B5 /* SAPCommon.framework */,
+				1BCFABF823F7172800BAF3B6 /* SAPCommon.xcframework */,
+				1BCFABF723F7172800BAF3B6 /* SAPFiori.xcframework */,
+				1BCFABF923F7172800BAF3B6 /* SAPFioriFlows.xcframework */,
+				1BCFABFC23F7172800BAF3B6 /* SAPFoundation.xcframework */,
+				1BCFABFA23F7172800BAF3B6 /* SAPOData.xcframework */,
+				1BCFABFB23F7172800BAF3B6 /* SAPOfflineOData.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -387,7 +389,7 @@
 				7A1315B11D4B982000A5DA56 /* Sources */,
 				7A1315B21D4B982000A5DA56 /* Frameworks */,
 				7A1315B31D4B982000A5DA56 /* Resources */,
-				758AC1C31D5A265200311F39 /* Embed Frameworks */,
+				1BCFAC0923F7172800BAF3B6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -420,6 +422,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -616,7 +619,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -627,20 +631,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = TravelExpenses/TravelExpenses.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = H8QB58T8ZU;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_BITCODE = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/frameworks/Release-xcframework/\"",
 				);
 				INFOPLIST_FILE = TravelExpenses/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.i826181.travelexpenses;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.i826181.travelexpenses.canada;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -650,20 +661,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = TravelExpenses/TravelExpenses.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = H8QB58T8ZU;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_BITCODE = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/frameworks/Release-xcframework/\"",
 				);
 				INFOPLIST_FILE = TravelExpenses/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.i826181.travelexpenses;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.i826181.travelexpenses.canada;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
