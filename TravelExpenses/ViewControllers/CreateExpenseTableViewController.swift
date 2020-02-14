@@ -164,7 +164,7 @@ class CreateExpenseTableViewController: FUIFormTableViewController {
             cell.uuidValues = uuidValues
             
             let entity = currencyPickerDataSource.singleEntity(for: uuidValues)
-            cell.valueTextField.text = entity?.currencyid
+            cell.valueLabel.text = entity?.currencyid
             cell.validationMessage = self.expense.validationMessage(for: \.currencyid)
             
             cell.onUuidChangeHandler = { [weak self] in
@@ -191,7 +191,7 @@ class CreateExpenseTableViewController: FUIFormTableViewController {
             cell.uuidValues = uuidValues
             
             let entity = expenseTypePickerDataSource.singleEntity(for: uuidValues)
-            cell.valueTextField.text = entity?.description
+            cell.valueLabel.text = entity?.description
             cell.validationMessage = self.expense.validationMessage(for: \.expensetypeid)
             
             cell.onUuidChangeHandler = { [weak self] in
@@ -241,7 +241,7 @@ class CreateExpenseTableViewController: FUIFormTableViewController {
             cell.uuidValues = uuidValues
             
             let entity = reportsPickerDataSource.singleEntity(for: uuidValues)
-            cell.valueTextField.text = entity?.reportname
+            cell.valueLabel.text = entity?.reportname
             cell.validationMessage = self.expense.validationMessage(for: \.reportid)
 
             cell.onUuidChangeHandler = { [weak self] in
@@ -265,7 +265,7 @@ class CreateExpenseTableViewController: FUIFormTableViewController {
             cell.uuidValues = uuidValues
             
             let entity = paymentTypePickerDataSource.singleEntity(for: uuidValues)
-            cell.valueTextField.text = entity?.description
+            cell.valueLabel.text = entity?.description
             cell.validationMessage = self.expense.validationMessage(for: \.paymenttypeid)
             
             cell.onUuidChangeHandler = { [weak self] in

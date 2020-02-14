@@ -38,7 +38,7 @@ final public class ExpenseItemType: EntityValue {
         super.init(withDefaults: withDefaults, type: TravelexpenseMetadata.EntityTypes.expenseItemType)
     }
 
-    open var amount: BigDecimal? {
+    public var amount: BigDecimal? {
         get {
             return DecimalValue.optional(self.optionalValue(for: ExpenseItemType.amount))
         }
@@ -47,15 +47,15 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open class func array(from: EntityValueList) -> Array<ExpenseItemType> {
+    public class func array(from: EntityValueList) -> Array<ExpenseItemType> {
         return ArrayConverter.convert(from.toArray(), Array<ExpenseItemType>())
     }
 
-    open func copy() -> ExpenseItemType {
+    public func copy() -> ExpenseItemType {
         return CastRequired<ExpenseItemType>.from(self.copyEntity())
     }
 
-    open var currency: CurrencyType? {
+    public var currency: CurrencyType? {
         get {
             return CastOptional<CurrencyType>.from(self.optionalValue(for: ExpenseItemType.currency))
         }
@@ -64,7 +64,7 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open var currencyid: String? {
+    public var currencyid: String? {
         get {
             return StringValue.optional(self.optionalValue(for: ExpenseItemType.currencyid))
         }
@@ -73,7 +73,7 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open var expenseType: ExpenseType? {
+    public var expenseType: ExpenseType? {
         get {
             return CastOptional<ExpenseType>.from(self.optionalValue(for: ExpenseItemType.expenseType))
         }
@@ -82,7 +82,7 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open var expensetypeid: String? {
+    public var expensetypeid: String? {
         get {
             return StringValue.optional(self.optionalValue(for: ExpenseItemType.expensetypeid))
         }
@@ -91,11 +91,11 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open override var isProxy: Bool {
+    public override var isProxy: Bool {
         return true
     }
 
-    open var itemdate: LocalDateTime? {
+    public var itemdate: LocalDateTime? {
         get {
             return LocalDateTime.castOptional(self.optionalValue(for: ExpenseItemType.itemdate))
         }
@@ -104,7 +104,7 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open var itemid: String? {
+    public var itemid: String? {
         get {
             return StringValue.optional(self.optionalValue(for: ExpenseItemType.itemid))
         }
@@ -113,11 +113,11 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open class func key(reportid: String?, itemid: String?) -> EntityKey {
+    public class func key(reportid: String?, itemid: String?) -> EntityKey {
         return EntityKey().with(name: "REPORTID", value: StringValue.of(optional: reportid)).with(name: "ITEMID", value: StringValue.of(optional: itemid))
     }
 
-    open var location: String? {
+    public var location: String? {
         get {
             return StringValue.optional(self.optionalValue(for: ExpenseItemType.location))
         }
@@ -126,7 +126,7 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open var notes: String? {
+    public var notes: String? {
         get {
             return StringValue.optional(self.optionalValue(for: ExpenseItemType.notes))
         }
@@ -135,11 +135,11 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open var old: ExpenseItemType {
+    public var old: ExpenseItemType {
         return CastRequired<ExpenseItemType>.from(self.oldEntity)
     }
 
-    open var paymentType: PaymentType? {
+    public var paymentType: PaymentType? {
         get {
             return CastOptional<PaymentType>.from(self.optionalValue(for: ExpenseItemType.paymentType))
         }
@@ -148,7 +148,7 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open var paymenttypeid: String? {
+    public var paymenttypeid: String? {
         get {
             return StringValue.optional(self.optionalValue(for: ExpenseItemType.paymenttypeid))
         }
@@ -157,7 +157,7 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open var reportid: String? {
+    public var reportid: String? {
         get {
             return StringValue.optional(self.optionalValue(for: ExpenseItemType.reportid))
         }
@@ -166,7 +166,7 @@ final public class ExpenseItemType: EntityValue {
         }
     }
 
-    open var vendor: String? {
+    public var vendor: String? {
         get {
             return StringValue.optional(self.optionalValue(for: ExpenseItemType.vendor))
         }

@@ -136,7 +136,7 @@ class OnboardingManager {
     /// The `rootViewController` is expected to be switched back by the caller.
     func onboardOrRestore() {
         // Set the spalsh screen
-        let splashViewController = FUIInfoViewController.createSplashScreenInstanceFromStoryboard()
+        let splashViewController = InfoSplash()//FUIInfoViewController.createSplashScreenInstanceFromStoryboard()
         self.appDelegate.window!.rootViewController = splashViewController
         self.presentationDelegate.setSplashScreen(splashViewController)
         self.presentationDelegate.animated = true
@@ -475,4 +475,13 @@ extension OnboardingManager {
             ModalUIViewControllerPresenter.topPresentedViewController()?.present(alertViewController, animated: true)
         }
     }
+}
+
+
+class InfoSplash: UIViewController, InfoTextSettable {
+    func setInfoText(_ text: String) {
+        //
+    }
+    
+    
 }

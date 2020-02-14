@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Set a FUIInfoViewController as the rootViewController, since there it is none set in the Main.storyboard
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window!.rootViewController = FUIInfoViewController.createSplashScreenInstanceFromStoryboard()
+        self.window!.rootViewController = UIViewController()//FUIInfoViewController.createSplashScreenInstanceFromStoryboard()
 
         do {
             // Attaches a LogUploadFileHandler instance to the root of the logging system
@@ -69,8 +69,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
 
     func onboarded(onboardingContext: OnboardingContext) {
-        self.uploadLogs(onboardingContext.sapURLSession, onboardingContext.sapcpmsSettingsParameters!)
-        self.registerForRemoteNotification(onboardingContext.sapURLSession, onboardingContext.sapcpmsSettingsParameters!)
+        self.uploadLogs(onboardingContext.sapURLSession, onboardingContext.sapcpmsSettingsParameters)
+        self.registerForRemoteNotification(onboardingContext.sapURLSession, onboardingContext.sapcpmsSettingsParameters)
         self.openOfflineStore(true)
     }
 
@@ -320,5 +320,11 @@ class OfflineODataDelegateSample: OfflineODataDelegate {
     public func offlineODataProvider(_: OfflineODataProvider, stateDidChange newState: OfflineODataStoreState) {
         let stateString = storeState2String(newState)
         self.logger.info("stateChanged: \(stateString)")
+    }
+}
+
+extension OnboardingContext {
+    var sapcpmsSettingsParameters: SAPcpmsSettingsParameters {
+        return info[.sapcpmsSettingsParameters] as! SAPcpmsSettingsParameters
     }
 }

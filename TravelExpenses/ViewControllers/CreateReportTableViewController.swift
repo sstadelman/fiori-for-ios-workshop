@@ -153,7 +153,7 @@ class CreateReportTableViewController: FUIFormTableViewController {
             cell.uuidValues = uuidValues
             
             let entity = reportStatusPickerDataSource.singleEntity(for: uuidValues)
-            cell.valueTextField.text = entity?.description
+            cell.valueLabel.text = entity?.description
             cell.validationMessage = self.report.validationMessage(for: \.reportstatusid)
             
             cell.onUuidChangeHandler = { [weak self] in

@@ -16,7 +16,7 @@ class BaseEntityTypePickerDataSource<EntityType: EntityValue & PickableEntityTyp
     var entities: [EntityType] = []
     
     // MARK: - FUIListPickerDataSource implementation
-    func numberOfRows() -> Int {
+    func numberOfRows(in listPickerTableView: UITableView) -> Int {
         return entities.count
     }
     
